@@ -29,7 +29,7 @@ class SliverAppBarC extends StatelessWidget {
         VerticalDivider(),
         MenuC(title: "Sobre", routeName: AppRoutes.SOBRE_MIM,),
         VerticalDivider(),
-        MenuC(title: "Projetos", routeName: AppRoutes.HOME,),
+        MenuC(title: "Projetos", routeName: AppRoutes.PROJETOS,),
         VerticalDivider(),
         Padding(
           padding: const EdgeInsets.only(right: 24),

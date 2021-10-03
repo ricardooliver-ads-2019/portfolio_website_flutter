@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:portfolio_website_flutter/app_routes.dart';
 import 'package:portfolio_website_flutter/screens/about_screen.dart';
 import 'package:portfolio_website_flutter/screens/home_page_screen.dart';
+import 'package:portfolio_website_flutter/screens/works_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -31,6 +32,7 @@ class MyApp extends StatelessWidget {
       routes: {
         AppRoutes.HOME: (context)=> HomePageScreens(),
         AppRoutes.SOBRE_MIM: (context)=> AboutScreen(),
+        AppRoutes.PROJETOS: (context)=> WorksScreen(),
       },
     );
   }

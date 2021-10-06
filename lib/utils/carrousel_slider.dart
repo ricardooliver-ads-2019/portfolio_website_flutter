@@ -2,13 +2,13 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/animation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:portfolio_website_flutter/utils/app_images.dart';
 
 final List<String> imgList = [
-  'https://source.unsplash.com/1600x500/?mac',
-  'https://source.unsplash.com/1600x500/?programming',
-  'https://source.unsplash.com/1600x500/?flutter',
-  'https://source.unsplash.com/1600x500/?python',
-  'https://source.unsplash.com/1600x500/?jobs',
+  AppImages.imgTelaApp1_0,
+  AppImages.imgTelaApp1_1,
+  AppImages.imgTelaApp2_0,
+  AppImages.imgTelaApp2_1,
 ];
 
 class CarrouselSlider extends StatelessWidget {
@@ -18,8 +18,8 @@ class CarrouselSlider extends StatelessWidget {
   Widget build(BuildContext context) {
     return CarouselSlider.builder(
       options: CarouselOptions(
-        height: MediaQuery.of(context).size.height * 0.5,
-        viewportFraction: 0.8,
+        height: 640,
+        viewportFraction: 1,
         autoPlay: true,
         autoPlayInterval: Duration(seconds: 5),
         autoPlayCurve: Curves.easeInOutCubic,
@@ -35,11 +35,11 @@ class CarrouselSlider extends StatelessWidget {
   }
 }
 
-Widget buildImage(String listImage, int index) => Container(width: 1920,
-  margin: EdgeInsets.symmetric(horizontal: 6),
-  color: Colors.grey,
+Widget buildImage(String listImage, int index) => Container(
+  
+  margin: EdgeInsets.symmetric(horizontal: 6, vertical: 74),
+  
   child: Image.network(
-      listImage,
-      fit: BoxFit.cover,
+      listImage, 
   ),
 );

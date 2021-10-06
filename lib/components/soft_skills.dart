@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio_website_flutter/utils/animated_progress_indicator.dart';
+import 'package:portfolio_website_flutter/utils/app_images.dart';
 
 class SoftSkills extends StatelessWidget {
   const SoftSkills({Key? key}) : super(key: key);
@@ -12,6 +13,7 @@ class SoftSkills extends StatelessWidget {
         SizedBox(
           width: MediaQuery.of(context).size.width * 0.1,
           child: AnimatedCircularProgressIndicator(
+            img: AppImages.imgAvata,
             label: "Gerenciamento", 
             colorC: Colors.blue, 
             percentage: 0.80, 
@@ -21,6 +23,7 @@ class SoftSkills extends StatelessWidget {
         SizedBox(
           width: MediaQuery.of(context).size.width * 0.1,
           child: AnimatedCircularProgressIndicator(
+            img: AppImages.imgAvata,
             label: "Diciplina", 
             colorC: Colors.orange, 
             percentage: 0.87, 
@@ -30,6 +33,7 @@ class SoftSkills extends StatelessWidget {
         SizedBox(
           width: MediaQuery.of(context).size.width * 0.1,
           child: AnimatedCircularProgressIndicator(
+            img: AppImages.imgAvata,
             label: "Trabalho em Equipe", 
             colorC: Colors.yellow, 
             percentage: 0.89, 

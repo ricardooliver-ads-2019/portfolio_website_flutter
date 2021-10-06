@@ -12,4 +12,8 @@ static  const imgHomeG = "images/imgHome/img_smartphone_home_960x192.png";
 static  const imgFundoCarrocellP = "images/imgCarrocell/imgFundoCarrocell_320x640.png";
 static  const imgFundoCarrocellM = "images/imgCarrocell/imgFundoCarrocell_640x1280.png";
 static  const imgFundoCarrocellG = "images/imgCarrocell/imgFundoCarrocell_960x1920.png";
+static  const imgTelaApp1_0 = "images/imgCarrocell/telaApp1.0.png";
+static  const imgTelaApp1_1 = "images/imgCarrocell/telaApp1.1.png";
+static  const imgTelaApp2_0 = "images/imgCarrocell/telaApp2.0.png";
+static  const imgTelaApp2_1 = "images/imgCarrocell/telaApp2.1.png";
 }

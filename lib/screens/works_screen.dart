@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:portfolio_website_flutter/components/bigheader.dart';
 import 'package:portfolio_website_flutter/components/cards.dart';
 import 'package:portfolio_website_flutter/components/sliver_appbar_custom.dart';
+import 'package:portfolio_website_flutter/utils/app_images.dart';
 import 'package:portfolio_website_flutter/utils/carrousel_slider.dart';
+import 'package:portfolio_website_flutter/utils/styles.dart';
 
 class WorksScreen extends StatefulWidget {
   const WorksScreen({ Key? key }) : super(key: key);
@@ -16,6 +18,7 @@ class _WorksScreenState extends State<WorksScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Definicoes.bgColor,
       body: CustomScrollView(
         slivers: [
           SliverAppBarC(),
@@ -24,7 +27,27 @@ class _WorksScreenState extends State<WorksScreen> {
           ),
 
           SliverToBoxAdapter(
-            child: CarrouselSlider(),
+            child: Center(
+              child: Text("Apps desenvolvidos por mim", 
+                style: TextStyle(fontSize: 25),
+              ),
+            ),
+          ),
+
+          SliverToBoxAdapter(child: Padding(padding: EdgeInsets.only(bottom: 20))),
+
+          SliverToBoxAdapter(
+            child: Stack(
+              children: [
+                Center(
+                  child: Container(
+                    
+                    child: Image(image: AssetImage(AppImages.imgFundoCarrocellP),),
+                  ),
+                ),
+                CarrouselSlider(),
+              ]
+            ),
           ),
 
           SliverToBoxAdapter(

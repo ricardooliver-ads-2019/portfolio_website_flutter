@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:portfolio_website_flutter/utils/animated_progress_indicator.dart';
 import 'package:portfolio_website_flutter/utils/app_images.dart';
 
-class ProgrammingSkills extends StatelessWidget {
-  const ProgrammingSkills({Key? key}) : super(key: key);
+class BackEndSkills extends StatelessWidget {
+  const BackEndSkills({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -12,11 +12,15 @@ class ProgrammingSkills extends StatelessWidget {
       children: [
         SizedBox(
           width: MediaQuery.of(context).size.width * 0.1,
-          child: AnimatedCircularProgressIndicator(
-            img: AppImages.imgAvata,
-            label: "Dart", 
-            colorC: Colors.blue, 
-            percentage: 0.70, 
+          child: Stack(
+            children:[
+                AnimatedCircularProgressIndicator(
+                img: AppImages.imgAvata,
+                label: "Dart", 
+                colorC: Colors.blue, 
+                percentage: 0.70, 
+              ),
+            ]
           ),
         ),
 

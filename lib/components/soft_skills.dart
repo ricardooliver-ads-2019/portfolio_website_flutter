@@ -3,42 +3,45 @@ import 'package:portfolio_website_flutter/utils/animated_progress_indicator.dart
 import 'package:portfolio_website_flutter/utils/app_images.dart';
 
 class SoftSkills extends StatelessWidget {
-  const SoftSkills({Key? key}) : super(key: key);
+  SoftSkills({Key? key}) : super(key: key);
+
+  final listSkills = [
+    {'img': AppImages.imgAvata.toString(), 'title':'Diciplina', 'color': Colors.blue, 'porcetage': 0.85},
+    {'img': AppImages.imgAvata.toString(), 'title':'Gerenciamento', 'color': Colors.blue, 'porcetage': 0.85},
+    {'img': AppImages.imgAvata.toString(), 'title':'Diciplina', 'color': Colors.blue, 'porcetage': 0.85},
+    {'img': AppImages.imgAvata.toString(), 'title':'Gerenciamento', 'color': Colors.blue, 'porcetage': 0.85},
+    {'img': AppImages.imgAvata.toString(), 'title':'Diciplina', 'color': Colors.blue, 'porcetage': 0.85},
+    {'img': AppImages.imgAvata.toString(), 'title':'Gerenciamento', 'color': Colors.blue, 'porcetage': 0.85},
+    {'img': AppImages.imgAvata.toString(), 'title':'Diciplina', 'color': Colors.blue, 'porcetage': 0.85},
+    {'img': AppImages.imgAvata.toString(), 'title':'Gerenciamento', 'color': Colors.blue, 'porcetage': 0.85},
+    {'img': AppImages.imgAvata.toString(), 'title':'Diciplina', 'color': Colors.blue, 'porcetage': 0.85},{'img': AppImages.imgAvata, 'title':'Gerenciamento', 'color': Colors.blue, 'porcetage': 0.85},
+  ];
 
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        SizedBox(
-          width: MediaQuery.of(context).size.width * 0.1,
-          child: AnimatedCircularProgressIndicator(
-            img: AppImages.imgAvata,
-            label: "Gerenciamento", 
-            colorC: Colors.blue, 
-            percentage: 0.80, 
-          ),
-        ),
+        ListView.builder(
+          itemCount: listSkills.length,
+          itemBuilder: (_, index){
+            var skill = listSkills[index];
+            return Padding(
+              padding: const EdgeInsets.all(32.0),
+              child: SizedBox(
+                width: 200,
+                child: AnimatedCircularProgressIndicator(
+                  img: skill['img'].toString(),
+                  label: skill['title'].toString(), 
+                  colorC: skill['color'], 
+                  percentage: skill['porcetage'], 
+                ),
+              ),
+            );
 
-        SizedBox(
-          width: MediaQuery.of(context).size.width * 0.1,
-          child: AnimatedCircularProgressIndicator(
-            img: AppImages.imgAvata,
-            label: "Diciplina", 
-            colorC: Colors.orange, 
-            percentage: 0.87, 
-          ),
-        ),
-
-        SizedBox(
-          width: MediaQuery.of(context).size.width * 0.1,
-          child: AnimatedCircularProgressIndicator(
-            img: AppImages.imgAvata,
-            label: "Trabalho em Equipe", 
-            colorC: Colors.yellow, 
-            percentage: 0.89, 
-          ),
-        ),
+          },
+        )
       ],
     );
   }

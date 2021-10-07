@@ -1,9 +1,9 @@
 import 'package:auto_size_text_pk/auto_size_text_pk.dart';
 import 'package:flutter/material.dart';
+import 'package:portfolio_website_flutter/components/back_end_skills.dart';
 import 'package:portfolio_website_flutter/components/bigheader.dart';
-import 'package:portfolio_website_flutter/components/programming_skills.dart';
+import 'package:portfolio_website_flutter/components/front_end_skills.dart';
 import 'package:portfolio_website_flutter/components/sliver_appbar_custom.dart';
-import 'package:portfolio_website_flutter/components/soft_skills.dart';
 import 'package:portfolio_website_flutter/utils/app_images.dart';
 import 'package:styled_text/styled_text.dart';
 
@@ -56,39 +56,117 @@ class _AboutScreenState extends State<AboutScreen> {
                   ),                  
                 ),
 
-                Text("Habilidades Back-End",
+                Text("Habilidades",
                   style: TextStyle(
                     fontSize: 25,
                   ),
                 ),
 
                 Padding(padding: EdgeInsets.only(top: 40)),
-
-                ProgrammingSkills(),
-
+                //Cart Skills FRONT-END
                 Container(
-                  margin: EdgeInsets.symmetric(vertical: 20),
-                  width: MediaQuery.of(context).size.width * 0.90,
-                  height: 1,
-                  color: Colors.black12,
-                ),
-
-                Padding(padding: EdgeInsets.only(top: 40)),
-                Text("Habilidades Front-End",
-                  style: TextStyle(
-                    fontSize: 25,
+                  decoration: BoxDecoration(
+                    color: Colors.black26,
+                    borderRadius: BorderRadius.circular(20)
                   ),
+                  width: MediaQuery.of(context).size.width * 0.9,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.symmetric(vertical: 20),
+                        child: Text("Front-End",
+                            style: TextStyle(
+                              fontSize: 20,
+                            ),
+                          ),
+                      ),
+                      FrontEndSkills(),
+                      Padding(padding: EdgeInsets.only(bottom: 20))
+                    ],
+                  )
                 ),
 
-                Padding(padding: EdgeInsets.only(top: 40)),
-                SoftSkills(),
 
+                Padding(padding: EdgeInsets.symmetric(vertical: 20)),
+
+                //Cart Skills BACK-END
                 Container(
-                  margin: EdgeInsets.symmetric(vertical: 20),
-                  width: MediaQuery.of(context).size.width * 0.90,
-                  height: 1,
-                  color: Colors.black12,
+                  decoration: BoxDecoration(
+                    color: Colors.black26,
+                    borderRadius: BorderRadius.circular(20)
+                  ),
+                  width: MediaQuery.of(context).size.width * 0.9,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.symmetric(vertical: 20),
+                        child: Text("Back-End",
+                            style: TextStyle(
+                              fontSize: 20,
+                            ),
+                        ),
+                      ),
+                      BackEndSkills(),
+                      Padding(padding: EdgeInsets.only(bottom: 20))
+                    ],
+                  )
                 ),
+
+
+                Padding(padding: EdgeInsets.symmetric(vertical: 20)),
+
+                //Cart Skills FRAMEWORKS
+                Container(
+                  decoration: BoxDecoration(
+                    color: Colors.black26,
+                    borderRadius: BorderRadius.circular(20)
+                  ),
+                  width: MediaQuery.of(context).size.width * 0.9,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.symmetric(vertical: 20),
+                        child: Text("Frameworks",
+                            style: TextStyle(
+                              fontSize: 20,
+                            ),
+                          ),
+                      ),
+                      FrontEndSkills(),
+                      Padding(padding: EdgeInsets.only(bottom: 20))
+                    ],
+                  )
+                ),
+
+
+
+                //Cart Skills Banco de Dados
+                Container(
+                  decoration: BoxDecoration(
+                    color: Colors.black26,
+                    borderRadius: BorderRadius.circular(20)
+                  ),
+                  width: MediaQuery.of(context).size.width * 0.9,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.symmetric(vertical: 20),
+                        child: Text("Front-End",
+                            style: TextStyle(
+                              fontSize: 20,
+                            ),
+                          ),
+                      ),
+                      FrontEndSkills(),
+                      Padding(padding: EdgeInsets.only(bottom: 20))
+                    ],
+                  )
+                ),
+                
               ],
             ),
           )

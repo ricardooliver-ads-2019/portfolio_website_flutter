@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio_website_flutter/utils/app_images.dart';
 import 'package:portfolio_website_flutter/utils/styles.dart';
 
 class AnimatedCircularProgressIndicator extends StatelessWidget {
@@ -12,16 +11,15 @@ class AnimatedCircularProgressIndicator extends StatelessWidget {
 
   }) : super(key: key);
 
-  final double percentage;
+  final dynamic percentage;
   final String label;
-  final Color colorC;
+  final dynamic colorC;
   final String img;
 
   @override
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        Image(image: AssetImage(img)),
         Column(
         children: [
           AspectRatio(
@@ -32,6 +30,7 @@ class AnimatedCircularProgressIndicator extends StatelessWidget {
               builder: (context, double value, child) => Stack(
                 fit: StackFit.passthrough,
                 children: [
+                  Image(image: AssetImage(img)),
                   CircularProgressIndicator(
                     strokeWidth: 15.0,
                     value: value,

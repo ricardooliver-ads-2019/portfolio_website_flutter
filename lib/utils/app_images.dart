@@ -1,6 +1,7 @@
 class  AppImages {
 static  const logoFull = "";
 static  const imgAvata = "images/imgAvata.png";
+static  const imgIconFlutter = "images/ImgIconFlutter.png";
 static  const imgRobo = "images/imgBanner/imgRoboBanner_640x640.png";
 static  const imgBannerP = "images/imgBanner/imgBanner_640x221.jpg";
 static  const imgBannerM = "images/imgBanner/imgBanner_1280x426.jpg";

@@ -33,7 +33,7 @@ class SliverAppBarC extends StatelessWidget {
         VerticalDivider(),
         Padding(
           padding: const EdgeInsets.only(right: 24),
-          child: MenuC(title: "Contatos", routeName: AppRoutes.HOME,),
+          child: MenuC(title: "Contatos", routeName: AppRoutes.CONTATOS,),
         ),
       ],
 

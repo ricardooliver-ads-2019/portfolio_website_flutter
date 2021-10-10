@@ -69,13 +69,24 @@ class _WorksScreenState extends State<WorksScreen> {
                   style: TextStyle(fontSize: 25),
                 ),
 
-                Padding(padding: EdgeInsets.only(bottom: 20)),
-                CardsC(),
-                CardsC(),
+                Padding(padding: EdgeInsets.only(bottom: 20)),                
 
               ],
             ),
           ),
+
+          SliverGrid.count(
+            crossAxisCount: 3,
+            children: [
+              CardsC(color: Colors.black12, title: "Titulo do card", description: "Descrição dos cardos:kkkkkkaskfkSFGKskfsFOPsfSPRRWPojqgjjjag~gjkrtjgjrtjg´s~gjsjdgojaewõyaergjgpgadrj~pgjaap~djghpjdrpgjarsdg~pjasgasg[p[p]jqjg"),
+
+              CardsC(color: Colors.black12, title: "Titulo do card", description: "Descrição dos cardos:kkkkkkaskfkSFGKskfsFOPsfSPRRWPojqgjjjag~gjkrtjgjrtjg´s~gjsjdgojaewõyaergjgpgadrj~pgjaap~djghpjdrpgjarsdg~pjasgasg[p[p]jqjg"),
+
+              CardsC(color: Colors.black12, title: "Titulo do card", description: "Descrição dos cardos:kkkkkkaskfkSFGKskfsFOPsfSPRRWPojqgjjjag~gjkrtjgjrtjg´s~gjsjdgojaewõyaergjgpgadrj~pgjaap~djghpjdrpgjarsdg~pjasgasg[p[p]jqjg"),
+            ],
+            
+          )
+          
         ],
       ),
     );

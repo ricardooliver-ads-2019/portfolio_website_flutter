@@ -1,10 +1,11 @@
 import 'package:auto_size_text_pk/auto_size_text_pk.dart';
 import 'package:flutter/material.dart';
-import 'package:portfolio_website_flutter/components/back_end_skills.dart';
 import 'package:portfolio_website_flutter/components/bigheader.dart';
-import 'package:portfolio_website_flutter/components/front_end_skills.dart';
+import 'package:portfolio_website_flutter/components/box_skills.dart';
 import 'package:portfolio_website_flutter/components/sliver_appbar_custom.dart';
 import 'package:portfolio_website_flutter/utils/app_images.dart';
+import 'package:portfolio_website_flutter/utils/list_skills.dart';
+import 'package:portfolio_website_flutter/utils/styles.dart';
 import 'package:styled_text/styled_text.dart';
 
 class AboutScreen extends StatefulWidget {
@@ -64,109 +65,57 @@ class _AboutScreenState extends State<AboutScreen> {
 
                 Padding(padding: EdgeInsets.only(top: 40)),
                 //Cart Skills FRONT-END
-                Container(
-                  decoration: BoxDecoration(
-                    color: Colors.black26,
-                    borderRadius: BorderRadius.circular(20)
-                  ),
-                  width: MediaQuery.of(context).size.width * 0.9,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 20),
-                        child: Text("Front-End",
-                            style: TextStyle(
-                              fontSize: 20,
-                            ),
-                          ),
-                      ),
-                      FrontEndSkills(),
-                      Padding(padding: EdgeInsets.only(bottom: 20))
-                    ],
-                  )
+                BoxSkills(
+                  title: 'Front-End', 
+                  lista: ListSkills.listFrontEnd,
+                  color: Definicoes.bgColor, 
+                  colorProgress: Colors.orange,
                 ),
 
+                Padding(padding: EdgeInsets.only(top: 20)),
 
-                Padding(padding: EdgeInsets.symmetric(vertical: 20)),
-
-                //Cart Skills BACK-END
-                Container(
-                  decoration: BoxDecoration(
-                    color: Colors.black26,
-                    borderRadius: BorderRadius.circular(20)
-                  ),
-                  width: MediaQuery.of(context).size.width * 0.9,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 20),
-                        child: Text("Back-End",
-                            style: TextStyle(
-                              fontSize: 20,
-                            ),
-                        ),
-                      ),
-                      BackEndSkills(),
-                      Padding(padding: EdgeInsets.only(bottom: 20))
-                    ],
-                  )
+                BoxSkills(
+                  title: 'Back-End', 
+                  lista: ListSkills.listBackEnd,
+                  color: Definicoes.bgColor, 
+                  colorProgress: Colors.orange,
                 ),
 
+                Padding(padding: EdgeInsets.only(top: 20)),
 
-                Padding(padding: EdgeInsets.symmetric(vertical: 20)),
-
-                //Cart Skills FRAMEWORKS
-                Container(
-                  decoration: BoxDecoration(
-                    color: Colors.black26,
-                    borderRadius: BorderRadius.circular(20)
-                  ),
-                  width: MediaQuery.of(context).size.width * 0.9,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 20),
-                        child: Text("Frameworks",
-                            style: TextStyle(
-                              fontSize: 20,
-                            ),
-                          ),
-                      ),
-                      FrontEndSkills(),
-                      Padding(padding: EdgeInsets.only(bottom: 20))
-                    ],
-                  )
+                BoxSkills(
+                  title: 'Framework', 
+                  lista: ListSkills.listframework,
+                  color: Definicoes.bgColor, 
+                  colorProgress: Colors.orange,
                 ),
 
+                Padding(padding: EdgeInsets.only(top: 20)),
 
-
-                //Cart Skills Banco de Dados
-                Container(
-                  decoration: BoxDecoration(
-                    color: Colors.black26,
-                    borderRadius: BorderRadius.circular(20)
-                  ),
-                  width: MediaQuery.of(context).size.width * 0.9,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 20),
-                        child: Text("Front-End",
-                            style: TextStyle(
-                              fontSize: 20,
-                            ),
-                          ),
-                      ),
-                      FrontEndSkills(),
-                      Padding(padding: EdgeInsets.only(bottom: 20))
-                    ],
-                  )
+                BoxSkills(
+                  title: 'Bando de Dados', 
+                  lista: ListSkills.listBandoDados,
+                  color: Definicoes.bgColor, 
+                  colorProgress: Colors.orange,
                 ),
-                
+
+                Padding(padding: EdgeInsets.only(top: 20)),
+
+                BoxSkills(
+                  title: 'Diferenciais', 
+                  lista: ListSkills.listDiferenciais,
+                  color: Definicoes.bgColor, 
+                  colorProgress: Colors.orange,
+                ),
+
+                Padding(padding: EdgeInsets.only(top: 20)),
+
+                BoxSkills(
+                  title: 'Personalidade', 
+                  lista: ListSkills.listComport,
+                  color: Definicoes.bgColor, 
+                  colorProgress: Colors.orange,
+                ),
               ],
             ),
           )

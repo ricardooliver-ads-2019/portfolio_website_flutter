@@ -21,6 +21,7 @@ class AnimatedCircularProgressIndicator extends StatelessWidget {
     return Stack(
       children: [
         Column(
+        mainAxisAlignment: MainAxisAlignment.start,
         children: [
           AspectRatio(
             aspectRatio: 1,
@@ -32,7 +33,7 @@ class AnimatedCircularProgressIndicator extends StatelessWidget {
                 children: [
                   Image(image: AssetImage(img)),
                   CircularProgressIndicator(
-                    strokeWidth: 15.0,
+                    strokeWidth: 13.0,
                     value: value,
                     color: colorC,
                     backgroundColor: Definicoes.progressIndicator0,

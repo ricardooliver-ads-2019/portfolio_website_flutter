@@ -32,9 +32,10 @@ class SliverAppBarC extends StatelessWidget {
           ? Padding(
             padding: const EdgeInsets.only(right: 25),
             child: IconButton(
-              onPressed: (){
-                Navigator.of(context).pushNamed(AppRoutes.MENUMOBILE);
-              }, 
+              onPressed: () {
+                Scaffold.of(context).openEndDrawer();
+              },
+
               icon: Icon(Icons.menu_rounded, size: 25, color: Colors.black45,)
             ),
           ) 

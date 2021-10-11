@@ -2,6 +2,7 @@ import 'package:auto_size_text_pk/auto_size_text_pk.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio_website_flutter/components/bigheader.dart';
 import 'package:portfolio_website_flutter/components/cards.dart';
+import 'package:portfolio_website_flutter/components/drawerc.dart';
 import 'package:portfolio_website_flutter/components/sliver_appbar_custom.dart';
 import 'package:portfolio_website_flutter/utils/app_images.dart';
 import 'package:portfolio_website_flutter/utils/carrousel_slider.dart';
@@ -18,6 +19,8 @@ class _WorksScreenState extends State<WorksScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      endDrawerEnableOpenDragGesture: false, // THIS WAY IT WILL NOT OPEN
+      endDrawer: DrawerC(),
       backgroundColor: Definicoes.bgColor,
       body: CustomScrollView(
         slivers: [

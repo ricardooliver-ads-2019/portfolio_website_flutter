@@ -1,5 +1,6 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
+import 'package:portfolio_website_flutter/components/drawerc.dart';
 import 'package:portfolio_website_flutter/utils/animated_progress_indicator.dart';
 import 'package:portfolio_website_flutter/utils/app_images.dart';
 import 'package:portfolio_website_flutter/utils/styles.dart';
@@ -27,6 +28,8 @@ class ContactsPageScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text("Textes"),
       ),
+      endDrawerEnableOpenDragGesture: false, // THIS WAY IT WILL NOT OPEN
+      endDrawer: DrawerC(),
       body: CustomScrollView(
         slivers:[
           SliverToBoxAdapter(

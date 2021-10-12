@@ -11,7 +11,7 @@ class SliverAppBarC extends StatelessWidget {
     var largura = MediaQuery.of(context).size.width;
     var altura = MediaQuery.of(context).size.height;
     return SliverAppBar(
-      backgroundColor: Definicoes.menuColor,
+      backgroundColor: Definicoes.bgDrawerColor,
       floating: true,
       //elevation: 25,
       //shadowColor: Colors.red,
@@ -36,20 +36,20 @@ class SliverAppBarC extends StatelessWidget {
                 Scaffold.of(context).openEndDrawer();
               },
 
-              icon: Icon(Icons.menu_rounded, size: 25, color: Colors.black45,)
+              icon: Icon(Icons.menu_rounded, size: 32, color: Definicoes.primaryColor,)
             ),
           ) 
           : Row(
             children: [
-              MenuC(title: "Home", routeName: AppRoutes.HOME,),
-              VerticalDivider(),
-              MenuC(title: "Sobre", routeName: AppRoutes.SOBRE_MIM,),
-              VerticalDivider(),
-              MenuC(title: "Projetos", routeName: AppRoutes.PROJETOS,),
-              VerticalDivider(),
+              MenuC(title: "HOME", routeName: AppRoutes.HOME,),
+              Padding(padding: EdgeInsets.only(right: 20)),
+              MenuC(title: "SOBRE", routeName: AppRoutes.SOBRE_MIM,),
+              Padding(padding: EdgeInsets.only(right: 20)),
+              MenuC(title: "PROJETOS", routeName: AppRoutes.PROJETOS,),
+              Padding(padding: EdgeInsets.only(right: 20)),
               Padding(
                 padding: const EdgeInsets.only(right: 24),
-                child: MenuC(title: "Contatos", routeName: AppRoutes.CONTATOS,),
+                child: MenuC(title: "CONTATOS", routeName: AppRoutes.CONTATOS,),
               ),
             ],
           ) 

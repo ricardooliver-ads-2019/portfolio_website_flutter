@@ -1,4 +1,5 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio_website_flutter/utils/app_images.dart';
 
@@ -12,13 +13,23 @@ class Infos extends StatelessWidget {
         Stack(
           children: [
             Center(
-              child: Padding(
-                padding: const EdgeInsets.symmetric(vertical: 20),
+              child: Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.white.withOpacity(0.5),
+                      spreadRadius: 3,
+                      blurRadius: 10,
+                      //offset: Offset(30.0, 30.0)
+                    )
+                  ],
+                ),
                 child: Image.asset(AppImages.imgHomeP, 
-                    width: MediaQuery.of(context).size.width * 0.8, 
-                    height: MediaQuery.of(context).size.height* 0.8,
-                    fit: BoxFit.contain,
-                  ),
+                  
+                  fit: BoxFit.contain,
+                           
+                ),
               ),
             ),
 

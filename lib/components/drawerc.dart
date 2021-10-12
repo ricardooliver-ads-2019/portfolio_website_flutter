@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-
+import 'package:google_fonts/google_fonts.dart';
+import 'package:portfolio_website_flutter/utils/styles.dart';
 import '../app_routes.dart';
 
 
@@ -8,7 +9,7 @@ class DrawerC extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Drawer(
     child: Container(
-      color: Color.fromARGB(10, 55, 200, 1),
+      color: Definicoes.bgDrawerColor,
       child: Column(
         children: [
           GestureDetector(
@@ -16,38 +17,74 @@ class DrawerC extends StatelessWidget {
               Navigator.of(context).pushNamed(AppRoutes.HOME);
             },
             child: Padding(
-              padding: const EdgeInsets.only(left: 20),
-              child: Text("Home", style: TextStyle(fontSize: 20),),
+              padding: const EdgeInsets.symmetric(vertical: 12),
+              child: MouseRegion(
+                cursor: SystemMouseCursors.click,
+                child: Text("HOME", 
+                  style: GoogleFonts.oswald(
+                    color: Definicoes.twoColor,
+                    fontSize: 15,
+                    fontWeight: FontWeight.normal,
+                  ),
+                ),
+              ),
             ),
           ),
-          Divider(color: Colors.black12,),
+          Divider(color: Definicoes.primaryColor,),
           GestureDetector(
             onTap: (){
               Navigator.of(context).pushNamed(AppRoutes.SOBRE_MIM);
             },
             child: Padding(
-              padding: const EdgeInsets.only(left: 20),
-              child: Text("Sobre-Mim", style: TextStyle(fontSize: 20),),
+              padding: const EdgeInsets.symmetric(vertical: 12),
+              child: MouseRegion(
+                cursor: SystemMouseCursors.click,
+                child: Text("SOBRE", 
+                  style: GoogleFonts.oswald(
+                    color: Definicoes.twoColor,
+                    fontSize: 15,
+                    fontWeight: FontWeight.normal,
+                  ),
+                ),
+              ),
             ),
           ),
-          Divider(color: Colors.black12,),
+          Divider(color: Definicoes.primaryColor,),
           GestureDetector(
             onTap: (){
               Navigator.of(context).pushNamed(AppRoutes.PROJETOS);
             },
             child: Padding(
-              padding: const EdgeInsets.only(left: 20),
-              child: Text("Projetos", style: TextStyle(fontSize: 20),),
+              padding: const EdgeInsets.symmetric(vertical: 12),
+              child: MouseRegion(
+                cursor: SystemMouseCursors.click,
+                child: Text("PROJETOS", 
+                  style: GoogleFonts.oswald(
+                    color: Definicoes.twoColor,
+                    fontSize: 15,
+                    fontWeight: FontWeight.normal,
+                  ),
+                ),
+              ),
             ),
           ),
-          Divider(color: Colors.black12,),
+          Divider(color: Definicoes.primaryColor,),
           GestureDetector(
             onTap: (){
               Navigator.of(context).pushNamed(AppRoutes.CONTATOS);
             },
             child: Padding(
-              padding: const EdgeInsets.only(left: 20),
-              child: Text("Contatos", style: TextStyle(fontSize: 20),),
+              padding: const EdgeInsets.symmetric(vertical: 12),
+              child: MouseRegion(
+                cursor: SystemMouseCursors.click,
+                child: Text("CONTATOS",
+                 style: GoogleFonts.oswald(
+                    color: Definicoes.twoColor,
+                    fontSize: 15,
+                    fontWeight: FontWeight.normal,
+                  ),
+                ),
+              ),
             ),
           ),
         ]

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio_website_flutter/utils/styles.dart';
 
 class MenuC extends StatelessWidget {
@@ -18,11 +19,16 @@ class MenuC extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           GestureDetector(
-            child: Text("$title", 
-                style: TextStyle(
-                  color: Definicoes.logoColor, 
-                  fontSize: 25),
-              textAlign: TextAlign.center,
+            child: MouseRegion(
+              cursor: SystemMouseCursors.click,
+              child: Text("$title", 
+                  style: TextStyle(
+                    color: Definicoes.twoColor,
+                    fontSize: 15.0,
+                    fontWeight: FontWeight.bold,
+                  ),
+                textAlign: TextAlign.center,
+              ),
             ),
             onTap: (){
               Navigator.of(context).pushNamed(routeName);

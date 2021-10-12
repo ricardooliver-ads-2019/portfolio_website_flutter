@@ -23,7 +23,7 @@ class BigHeader extends StatelessWidget {
                 child: Image.asset(
                   AppImages.imgBannerG,
                   width: MediaQuery.of(context).size.width,
-                  height: MediaQuery.of(context).size.height * 0.2,
+                  height: MediaQuery.of(context).size.height * 0.1,
                   fit: BoxFit.cover,
                 ),
               ),
@@ -50,8 +50,8 @@ class BigHeader extends StatelessWidget {
                   Container(
                     child: Image.asset(
                       AppImages.imgRobo, 
-                      width: MediaQuery.of(context).size.width * 0.2,
-                      height: MediaQuery.of(context).size.height * 0.2,
+                      width: MediaQuery.of(context).size.width * 0.1,
+                      height: MediaQuery.of(context).size.height * 0.1,
                     ),
                   ),
                 ],

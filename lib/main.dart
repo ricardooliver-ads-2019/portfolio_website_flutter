@@ -1,3 +1,4 @@
+// @dart=2.9;
 import 'package:flutter/material.dart';
 import 'package:portfolio_website_flutter/app_routes.dart';
 import 'package:portfolio_website_flutter/screens/about_screen.dart';

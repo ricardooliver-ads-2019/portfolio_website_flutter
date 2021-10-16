@@ -35,12 +35,12 @@ class Infos extends StatelessWidget {
 
             Center(
               child: Padding(
-                padding: const EdgeInsets.symmetric(vertical: 80),
+                padding: const EdgeInsets.symmetric(vertical: 20),
                 child: Image.asset(AppImages.imgPerson, 
-                    width: MediaQuery.of(context).size.width * 0.5, 
-                    height: MediaQuery.of(context).size.height* 0.5,
-                    fit: BoxFit.contain,
-                  ),
+                  width: 200, 
+                  height: 500,
+                  fit: BoxFit.contain,
+                ),
               ),
             ),
 

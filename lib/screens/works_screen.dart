@@ -62,7 +62,7 @@ class _WorksScreenState extends State<WorksScreen> {
                     height: MediaQuery.of(context).size.height * 0.15,
                     child: const AutoSizeText(
                       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets",
-                      style: TextStyle(fontSize: 17),
+                      style: TextStyle(color: Colors.white, fontSize: 17),
                       textAlign: TextAlign.justify, 
                     ),
                   ),
@@ -85,7 +85,7 @@ class _WorksScreenState extends State<WorksScreen> {
 
               CardsC(color: Colors.black12, title: "Titulo do card", description: "Descrição dos cardos:kkkkkkaskfkSFGKskfsFOPsfSPRRWPojqgjjjag~gjkrtjgjrtjg´s~gjsjdgojaewõyaergjgpgadrj~pgjaap~djghpjdrpgjarsdg~pjasgasg[p[p]jqjg"),
 
-              CardsC(color: Colors.black12, title: "Titulo do card", description: "Descrição dos cardos:kkkkkkaskfkSFGKskfsFOPsfSPRRWPojqgjjjag~gjkrtjgjrtjg´s~gjsjdgojaewõyaergjgpgadrj~pgjaap~djghpjdrpgjarsdg~pjasgasg[p[p]jqjg"),
+              CardsC(color: Colors.black12, title: "Titulo do card", description: "Descrição dos cardos:kkkkkkaskfkSFGKskfsFOPsfSPRRWPojqgjjjag~gjkrtjgjrtjg´s~gjsjdgojaewõyaergjgpgadrj~pgjaap~djghpjdrpgjarsdg~pjasgasgppjqjg"),
             ],
             
           )

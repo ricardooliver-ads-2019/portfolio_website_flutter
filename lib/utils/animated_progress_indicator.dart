@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio_website_flutter/utils/styles.dart';
 
 class AnimatedCircularProgressIndicator extends StatelessWidget {
@@ -41,7 +42,11 @@ class AnimatedCircularProgressIndicator extends StatelessWidget {
                   Center(
                     child: Text(
                       (value * 100).toInt().toString() + "%",
-                      style: Theme.of(context).textTheme.subtitle1,
+                      style: GoogleFonts.oswald(
+                        color: Colors.orange,
+                              fontSize: 20.0,
+                              fontWeight: FontWeight.bold,
+                            ),
                     ),
                   ),
                 ],
@@ -53,7 +58,7 @@ class AnimatedCircularProgressIndicator extends StatelessWidget {
             label,
             maxLines: 1,
             overflow: TextOverflow.ellipsis,
-            style: Theme.of(context).textTheme.subtitle2,
+            style: TextStyle(color: Colors.white),
           ),
         ],
       ),

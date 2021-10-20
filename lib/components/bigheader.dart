@@ -19,21 +19,14 @@ class BigHeader extends StatelessWidget {
         children: [
           Stack(
             children:[ 
-              SafeArea(
-                child: Image.asset(
-                  AppImages.imgBannerG,
-                  width: MediaQuery.of(context).size.width,
-                  height: MediaQuery.of(context).size.height * 0.1,
-                  fit: BoxFit.cover,
-                ),
-              ),
+              
 
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Container(
-                    padding: EdgeInsets.symmetric(horizontal:80),
+                    padding: EdgeInsets.symmetric(horizontal:20),
                     child: AnimatedTextKit(
                       animatedTexts: [
                         ColorizeAnimatedText(
@@ -47,13 +40,7 @@ class BigHeader extends StatelessWidget {
                     ),
                   ),
 
-                  Container(
-                    child: Image.asset(
-                      AppImages.imgRobo, 
-                      width: MediaQuery.of(context).size.width * 0.1,
-                      height: MediaQuery.of(context).size.height * 0.1,
-                    ),
-                  ),
+                  
                 ],
               ),
 

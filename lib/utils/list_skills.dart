@@ -50,3 +50,4 @@ class ListSkills{
     {'img': AppImages.imgIconFlutter, 'title':'Canvas', 'porcetage': 0.85},
   ];
 }
+

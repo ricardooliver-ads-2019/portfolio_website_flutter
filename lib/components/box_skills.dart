@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio_website_flutter/utils/animated_progress_indicator.dart';
+import 'package:portfolio_website_flutter/utils/styles.dart';
 
 class BoxSkills extends StatelessWidget {
   
@@ -13,11 +14,14 @@ class BoxSkills extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var tela = MediaQuery.of(context).size.width;
+    
     return Container(
-      width: MediaQuery.of(context).size.width*0.70,
+      width: tela > 600 ? MediaQuery.of(context).size.width*0.30 : MediaQuery.of(context).size.width*0.9,
       decoration: BoxDecoration(
+        color: color,
         borderRadius: BorderRadius.circular(20),
-        color: Colors.black12,
+        border: Border.all(color: Definicoes.primaryColor, width: 2)
       ),
       child: Column(
         children: [
@@ -26,7 +30,7 @@ class BoxSkills extends StatelessWidget {
               padding: const EdgeInsets.only(top: 20),
               child: Text(title, style: TextStyle(
                 fontSize: 25,
-                color: Colors.black54,
+                color: Colors.white,
                 fontWeight: FontWeight.w500,
               ),),
             ),
@@ -37,6 +41,7 @@ class BoxSkills extends StatelessWidget {
               width: 420,
               height: 150,
               child: Scrollbar(
+                showTrackOnHover:true,
                 controller: controller,
                 isAlwaysShown: true,
                 child: ListView.builder(

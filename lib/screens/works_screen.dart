@@ -24,7 +24,7 @@ class _WorksScreenState extends State<WorksScreen> {
       backgroundColor: Definicoes.bgColor,
       body: CustomScrollView(
         slivers: [
-          SliverAppBarC(),
+          SliverToBoxAdapter(child: SliverAppBarC()),
           SliverToBoxAdapter(
             child: BigHeader(pagina: "Projetos",),
           ),

@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio_website_flutter/app_routes.dart';
+import 'package:portfolio_website_flutter/components/box_logo.dart';
 import 'package:portfolio_website_flutter/components/menuC.dart';
 import 'package:portfolio_website_flutter/utils/styles.dart';
+
 
 class SliverAppBarC extends StatelessWidget {
   const SliverAppBarC({Key? key}) : super(key: key);
@@ -10,24 +12,22 @@ class SliverAppBarC extends StatelessWidget {
   Widget build(BuildContext context) {
     var largura = MediaQuery.of(context).size.width;
     var altura = MediaQuery.of(context).size.height;
-    return SliverAppBar(
-      backgroundColor: Definicoes.bgDrawerColor,
-      floating: true,
+    return Container(
+      color: Definicoes.bgDrawerColor,
+      //floating: true,
       //elevation: 25,
       //shadowColor: Colors.red,
-      centerTitle: false,
-      title: Text("Ricardo Oliveira", 
-        style: TextStyle(
-          color: Definicoes.logoColor,
-          fontSize: 28,
-          fontWeight: FontWeight.w400,
-          letterSpacing: -1.2,
-
-        ),
-      ),
-
-      actions: [
-        Container(
+      //centerTitle: false,
+      width: largura,
+      height: 80,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(left: 24),
+            child: BoxLogo(),
+          ),
+          Container(
           child: largura < 680 
           ? Padding(
             padding: const EdgeInsets.only(right: 25),
@@ -55,7 +55,10 @@ class SliverAppBarC extends StatelessWidget {
           ) 
 
         )
-      ],
+
+      ],),
+      //leading: SliverToBoxAdapter(child: Container(width: 50, height: 50, color: Colors.red,)),
+      
 
     );
   }

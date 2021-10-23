@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio_website_flutter/utils/app_images.dart';
 import 'package:portfolio_website_flutter/utils/styles.dart';
 import 'package:styled_text/styled_text.dart';
+import 'package:url_launcher/link.dart';
 
 class MyCardTop extends StatelessWidget {
   const MyCardTop({Key? key}) : super(key: key);
@@ -42,7 +44,7 @@ class MyCardTop extends StatelessWidget {
                 color: Definicoes.primaryColor,
                 fontSize: 22.0,
                 fontWeight: FontWeight.normal),
-              )
+            )
           },
         ),
 
@@ -57,6 +59,71 @@ class MyCardTop extends StatelessWidget {
               )
           },
         ),
+
+        Padding(
+          padding: const EdgeInsets.only(bottom: 10),
+          child: Container(
+            width: 230,
+            height: 1,
+            color: Definicoes.logoColor,
+          ),
+        ),
+
+        Row(
+            children: [
+              Expanded(
+                flex: 1,
+                child: MouseRegion(
+                  cursor: SystemMouseCursors.click,
+                  child: Link(
+                    uri: Uri.parse("https://www.instagram.com/ricardooliver.ads/"),
+                    target: LinkTarget.blank, 
+                    builder: (context, followLink){
+                      return GestureDetector(
+                        onTap: followLink,
+                        child: Icon(FontAwesomeIcons.instagramSquare, color: Definicoes.bgColor,size: 30),
+                      );
+                    }
+                  ),
+                ),
+              ),
+
+              Expanded(
+                flex: 1,
+                child: MouseRegion(
+                  cursor: SystemMouseCursors.click,
+                  child: Link(
+                    uri: Uri.parse("https://github.com/ricardooliver-ads-2019"),
+                    target: LinkTarget.blank, 
+                    builder: (context, followLink){
+                      return GestureDetector(
+                        onTap: followLink,
+                        child: Icon(FontAwesomeIcons.githubSquare, color: Definicoes.bgColor,size: 30),
+                      );
+                    }
+                  ),
+                ),
+              ),
+
+                Expanded(
+                  flex: 1,
+                  child: MouseRegion(
+                    cursor: SystemMouseCursors.click,
+                    child: Link(
+                      uri: Uri.parse("https://www.linkedin.com/feed/?trk=homepage-basic_google-one-tap-submit"),
+                      target: LinkTarget.blank, 
+                      builder: (context, followLink){
+                        return GestureDetector(
+                          onTap: followLink,
+                          child: Icon(FontAwesomeIcons.linkedin, color: Definicoes.bgColor,size: 30),
+                        );
+                      }
+                    ),
+                  ),
+                ),
+                
+            ],
+          ),
 
 
 

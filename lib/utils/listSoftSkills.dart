@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:portfolio_website_flutter/components/soft_skillsM.dart';
 
 class ListSoftSkill {

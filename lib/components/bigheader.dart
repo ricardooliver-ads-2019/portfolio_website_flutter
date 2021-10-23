@@ -1,6 +1,5 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
-import 'package:portfolio_website_flutter/utils/app_images.dart';
 import 'package:portfolio_website_flutter/utils/styles.dart';
 
 class BigHeader extends StatelessWidget {
@@ -15,37 +14,26 @@ class BigHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(bottom: 50),
-      child: Column(
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Stack(
-            children:[ 
-              
+          Container(
+            padding: EdgeInsets.symmetric(horizontal:40, vertical: 5),
+            child: AnimatedTextKit(
+              animatedTexts: [
+                ColorizeAnimatedText(
+                  '$pagina',
+                  textStyle: Definicoes.colorizeTextStyle,
+                  colors: Definicoes.colorizeColors,
+                ),
+              ],
+              repeatForever: true,
 
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Container(
-                    padding: EdgeInsets.symmetric(horizontal:20),
-                    child: AnimatedTextKit(
-                      animatedTexts: [
-                        ColorizeAnimatedText(
-                          '$pagina',
-                          textStyle: Definicoes.colorizeTextStyle,
-                          colors: Definicoes.colorizeColors,
-                        ),
-                      ],
-                      repeatForever: true,
+            ),
+          ),
 
-                    ),
-                  ),
-
-                  
-                ],
-              ),
-
-            ],
-          )
+          
         ],
       ),
     );

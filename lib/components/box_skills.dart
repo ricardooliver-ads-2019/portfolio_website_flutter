@@ -17,7 +17,7 @@ class BoxSkills extends StatelessWidget {
     var tela = MediaQuery.of(context).size.width;
     
     return Container(
-      width: tela > 600 ? MediaQuery.of(context).size.width*0.30 : MediaQuery.of(context).size.width*0.9,
+      width: tela > 701 ? MediaQuery.of(context).size.width*0.26 : MediaQuery.of(context).size.width*0.9,
       decoration: BoxDecoration(
         color: color,
         borderRadius: BorderRadius.circular(20),
@@ -38,8 +38,9 @@ class BoxSkills extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(32.0),
             child: Container(
+              
               width: 420,
-              height: 150,
+              height: 200,
               child: Scrollbar(
                 showTrackOnHover:true,
                 controller: controller,
@@ -49,10 +50,10 @@ class BoxSkills extends StatelessWidget {
                   scrollDirection: Axis.horizontal,
                   itemCount: lista.length,
                   itemBuilder: (_, index){
-                    return Padding(padding: EdgeInsets.all(20.0), 
+                    return Padding(padding: EdgeInsets.symmetric(horizontal: 12,vertical: 20), 
                       child: Container(
-                        width:80,
-                        height: 50,
+                        
+                        width:110,
                         child: AnimatedCircularProgressIndicator(
                           colorC: colorProgress,
                           img: lista[index]['img'],

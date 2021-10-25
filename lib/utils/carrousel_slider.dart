@@ -18,13 +18,14 @@ class CarrouselSlider extends StatelessWidget {
   Widget build(BuildContext context) {
     return CarouselSlider.builder(
       options: CarouselOptions(
-        height: 640,
+        height: 489,
         viewportFraction: 1,
         autoPlay: true,
         autoPlayInterval: Duration(seconds: 5),
         autoPlayCurve: Curves.easeInOutCubic,
-        enlargeCenterPage: false,
+        enlargeCenterPage: true,
         scrollDirection: Axis.horizontal,
+        enableInfiniteScroll: true,
       ),
       itemCount: imgList.length,
       itemBuilder: (context, index, realIndex){
@@ -36,10 +37,11 @@ class CarrouselSlider extends StatelessWidget {
 }
 
 Widget buildImage(String listImage, int index) => Container(
-  
-  margin: EdgeInsets.symmetric(horizontal: 6, vertical: 74),
-  
+  margin: EdgeInsets.only(top: 75),
+  width: 218, 
   child: Image.network(
-      listImage, 
+      listImage,
+      fit: BoxFit.fill,
+      
   ),
 );

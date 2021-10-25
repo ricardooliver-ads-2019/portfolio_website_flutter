@@ -54,7 +54,7 @@ class _AboutScreenState extends State<AboutScreen> {
                     child: SlimyCard(
                       color: Colors.white,
                       width: 270,
-                      topCardHeight: 320,
+                      topCardHeight: 400,
                       bottomCardHeight: 150,
                       topCardWidget: MyCardTop(),
                       bottomCardWidget: MyCardBotton(),

@@ -16,7 +16,7 @@ class MyCardTop extends StatelessWidget {
       children: [
         Container(
           width: 170,
-          height: 150,
+          height: 220,
           decoration: BoxDecoration(
             color: Colors.black,
             borderRadius: BorderRadius.circular(10),
@@ -29,7 +29,7 @@ class MyCardTop extends StatelessWidget {
               )
             ],
             image: DecorationImage(
-              image: AssetImage(AppImages.avata),
+              image: AssetImage(AppImages.imgPersonCard),
             )
           ),
         ),

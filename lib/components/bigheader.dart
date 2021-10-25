@@ -19,7 +19,7 @@ class BigHeader extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Container(
-            padding: EdgeInsets.symmetric(horizontal:40, vertical: 5),
+            padding: EdgeInsets.symmetric(horizontal:24, vertical: 5),
             child: AnimatedTextKit(
               animatedTexts: [
                 ColorizeAnimatedText(

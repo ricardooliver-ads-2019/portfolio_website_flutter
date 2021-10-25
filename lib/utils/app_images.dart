@@ -1,5 +1,7 @@
 class  AppImages {
 static  const logoFull = "images/imgLogo.png";
+static  const imgPersonCard = "images/imgRicardo.png";
+static  const imgFundoWorks = "images/imgFundoWorks.png";
 static  const avata = "images/avata.jpg";
 static  const imgAvata = "images/imgAvata.png";
 static  const imgRobo = "images/imgBanner/imgRoboBanner_640x640.png";

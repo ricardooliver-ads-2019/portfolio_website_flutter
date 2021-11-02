@@ -2,22 +2,24 @@ import 'package:auto_size_text_pk/auto_size_text_pk.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio_website_flutter/components/bigheader.dart';
-import 'package:portfolio_website_flutter/components/cards.dart';
+import 'package:portfolio_website_flutter/components/cards_AppsWebs.dart';
 import 'package:portfolio_website_flutter/components/drawerc.dart';
+import 'package:portfolio_website_flutter/components/list_cardsApps.dart';
 import 'package:portfolio_website_flutter/components/sliver_appbar_custom.dart';
 import 'package:portfolio_website_flutter/utils/app_images.dart';
 import 'package:portfolio_website_flutter/utils/carrousel_slider.dart';
+import 'package:portfolio_website_flutter/utils/list_cardsAppsWebs.dart';
 import 'package:portfolio_website_flutter/utils/styles.dart';
+
 
 class WorksScreen extends StatefulWidget {
   const WorksScreen({ Key? key }) : super(key: key);
-
+  
   @override
   _WorksScreenState createState() => _WorksScreenState();
 }
 
 class _WorksScreenState extends State<WorksScreen> {
-  
   @override
   Widget build(BuildContext context) {
     var tela = MediaQuery.of(context).size.width;
@@ -25,7 +27,13 @@ class _WorksScreenState extends State<WorksScreen> {
       endDrawerEnableOpenDragGesture: false, // THIS WAY IT WILL NOT OPEN
       endDrawer: DrawerC(),
       backgroundColor: Definicoes.bgColor,
-      body: CustomScrollView(
+      body: 
+      Theme(data: Theme.of(context).copyWith(
+        scrollbarTheme: ScrollbarThemeData(
+          thumbColor: MaterialStateProperty.all(Definicoes.threeColor), 
+        )
+      ),
+      child: CustomScrollView(
         slivers: [
           SliverToBoxAdapter(child: SliverAppBarC()),
           SliverToBoxAdapter(
@@ -34,7 +42,7 @@ class _WorksScreenState extends State<WorksScreen> {
 
           SliverToBoxAdapter(
             child: Center(
-              child: Text("Apps desenvolvidos por mim", 
+              child: Text("Últimos Projetos", 
                 style: GoogleFonts.oswald(
                   color: Definicoes.primaryColor,
                   fontSize: 32.0,
@@ -44,7 +52,7 @@ class _WorksScreenState extends State<WorksScreen> {
             ),
           ),
 
-          SliverToBoxAdapter(child: Padding(padding: EdgeInsets.only(bottom: 20))),
+
 
           SliverToBoxAdapter(
             child: Stack(
@@ -52,7 +60,7 @@ class _WorksScreenState extends State<WorksScreen> {
                 Center(
                   child: Container(
                     child: Image.asset(AppImages.imgFundoWorks, fit: BoxFit.fill,),
-                    width: tela > 800  ? 790 : tela * 0.9,
+                    width: tela > 1080  ? 1080 : tela * 0.9,
                     height: 700,
                     
                   ),
@@ -84,133 +92,70 @@ class _WorksScreenState extends State<WorksScreen> {
                       textAlign: TextAlign.justify, 
                     ),
                   ),
-                ),
-
-                Text("Últimos Projetos", 
-                  style: GoogleFonts.oswald(
-                    color: Definicoes.primaryColor,
-                    fontSize: 24.0,
-                    fontWeight: FontWeight.normal
-                  ),
-                ),
-
-                Padding(padding: EdgeInsets.only(bottom: 20)),                
-
+                ),        
               ],
             ),
           ),
 
-          SliverGrid.count(
-            childAspectRatio: tela > 600 ? 1 : 0.5 ,
-            crossAxisSpacing: 5,
-            mainAxisSpacing: 5,
-            crossAxisCount: tela > 600 ? 3 : 2 ,
-            children: [
-              
-              CardsC(color: Colors.black12, title: "Titulo do card", description: "Descrição dos cardos:kkkkkkaskfkSFGKskfsFOPsfSPRRWPojqgjjjag~gjkrtjgjrtjg´s~gjsjdgojaewõyaergjgpgadrj~pgjaap~djghpjdrpgjarsdg~pjasgasg[p[p]jqjg"),
-          
-              CardsC(color: Colors.black12, title: "Titulo do card", description: "Descrição dos cardos:kkkkkkaskfkSFGKskfsFOPsfSPRRWPojqgjjjag~gjkrtjgjrtjg´s~gjsjdgojaewõyaergjgpgadrj~pgjaap~djghpjdrpgjarsdg~pjasgasg[p[p]jqjg"),
-          
-              CardsC(color: Colors.black12, title: "Titulo do card", description: "Descrição dos cardos:kkkkkkaskfkSFGKskfsFOPsfSPRRWPojqgjjjag~gjkrtjgjrtjg´s~gjsjdgojaewõyaergjgpgadrj~pgjaap~djghpjdrpgjarsdg~pjasgasg[p[p]jqjg"),
-              CardsC(color: Colors.black12, title: "Titulo do card", description: "Descrição dos cardos:kkkkkkaskfkSFGKskfsFOPsfSPRRWPojqgjjjag~gjkrtjgjrtjg´s~gjsjdgojaewõyaergjgpgadrj~pgjaap~djghpjdrpgjarsdg~pjasgasg[p[p]jqjg"),
-              CardsC(color: Colors.black12, title: "Titulo do card", description: "Descrição dos cardos:kkkkkkaskfkSFGKskfsFOPsfSPRRWPojqgjjjag~gjkrtjgjrtjg´s~gjsjdgojaewõyaergjgpgadrj~pgjaap~djghpjdrpgjarsdg~pjasgasg[p[p]jqjg"),
-          
-              Image(image: AssetImage(AppImages.imgPerson))
-            ],
-            
+          SliverToBoxAdapter(
+            child: Center(
+              child: Text("Aplicativos", 
+                style: GoogleFonts.oswald(
+                  color: Definicoes.primaryColor,
+                  fontSize: 32.0,
+                  fontWeight: FontWeight.normal
+                ),
+              ),
+            ),
           ),
 
-          
+          SliverToBoxAdapter(
+            child: Container(
+              height: 475,
+              decoration: BoxDecoration(
+            ),
+              child: ListCardsApps(),
+            )
+          ),
+
+          SliverToBoxAdapter(
+            child: Padding(padding: EdgeInsets.only(bottom: 40),)
+          ),
+
+          SliverToBoxAdapter(
+            child: Center(
+              child: Text("Aplicações Webs", 
+                style: GoogleFonts.oswald(
+                  color: Definicoes.primaryColor,
+                  fontSize: 32.0,
+                  fontWeight: FontWeight.normal
+                ),
+              ),
+            ),
+          ),
+
+          SliverToBoxAdapter(
+            child: Padding(padding: EdgeInsets.only(bottom: 20),)
+          ),
+
 
           SliverGrid(
             gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
               maxCrossAxisExtent: 300.0,
               mainAxisSpacing: 10.0,
               crossAxisSpacing: 10.0,
-              childAspectRatio: 1.0,
+              childAspectRatio: 0.6,
             ),
             delegate: SliverChildBuilderDelegate(
               (BuildContext context, int index) {
-                return Container(
-                  alignment: Alignment.center,
-                  color: Colors.teal[100 * (index % 9)],
-                  child: Text('grid item $index'),
-                );
+                return cardsAppsWebs(img: ListCardsAppsWebs().cardsAppsWebsList[index].img, title: ListCardsAppsWebs().cardsAppsWebsList[index].title, linkRota: ListCardsAppsWebs().cardsAppsWebsList[index].rota.toString());
               },
-              childCount: 20,
+              childCount: ListCardsAppsWebs().cardsAppsWebsList.length,
             ),
           ),
-
-          SliverGrid.extent(
-            maxCrossAxisExtent: 400, 
-            crossAxisSpacing: 10,
-            mainAxisSpacing: 10,
-            childAspectRatio: 1.0,
-            children: [
-              CardsC(color: Colors.black12, title: "Titulo do card", description: "Descrição dos cardos:kkkkkkaskfkSFGKskfsFOPsfSPRRWPojqgjjjag~gjkrtjgjrtjg´s~gjsjdgojaewõyaergjgpgadrj~pgjaap~djghpjdrpgjarsdg~pjasgasg[p[p]jqjg"),
-              CardsC(color: Colors.black12, title: "Titulo do card", description: "Descrição dos cardos:kkkkkkaskfkSFGKskfsFOPsfSPRRWPojqgjjjag~gjkrtjgjrtjg´s~gjsjdgojaewõyaergjgpgadrj~pgjaap~djghpjdrpgjarsdg~pjasgasg[p[p]jqjg"),
-              CardsC(color: Colors.black12, title: "Titulo do card", description: "Descrição dos cardos:kkkkkkaskfkSFGKskfsFOPsfSPRRWPojqgjjjag~gjkrtjgjrtjg´s~gjsjdgojaewõyaergjgpgadrj~pgjaap~djghpjdrpgjarsdg~pjasgasg[p[p]jqjg"),
-              CardsC(color: Colors.black12, title: "Titulo do card", description: "Descrição dos cardos:kkkkkkaskfkSFGKskfsFOPsfSPRRWPojqgjjjag~gjkrtjgjrtjg´s~gjsjdgojaewõyaergjgpgadrj~pgjaap~djghpjdrpgjarsdg~pjasgasg[p[p]jqjg"),
-              CardsC(color: Colors.black12, title: "Titulo do card", description: "Descrição dos cardos:kkkkkkaskfkSFGKskfsFOPsfSPRRWPojqgjjjag~gjkrtjgjrtjg´s~gjsjdgojaewõyaergjgpgadrj~pgjaap~djghpjdrpgjarsdg~pjasgasg[p[p]jqjg"),
-              CardsC(color: Colors.black12, title: "Titulo do card", description: "Descrição dos cardos:kkkkkkaskfkSFGKskfsFOPsfSPRRWPojqgjjjag~gjkrtjgjrtjg´s~gjsjdgojaewõyaergjgpgadrj~pgjaap~djghpjdrpgjarsdg~pjasgasg[p[p]jqjg"),
-
-              CardsC(color: Colors.black12, title: "Titulo do card", description: "Descrição dos cardos:kkkkkkaskfkSFGKskfsFOPsfSPRRWPojqgjjjag~gjkrtjgjrtjg´s~gjsjdgojaewõyaergjgpgadrj~pgjaap~djghpjdrpgjarsdg~pjasgasg[p[p]jqjg"),
-              CardsC(color: Colors.black12, title: "Titulo do card", description: "Descrição dos cardos:kkkkkkaskfkSFGKskfsFOPsfSPRRWPojqgjjjag~gjkrtjgjrtjg´s~gjsjdgojaewõyaergjgpgadrj~pgjaap~djghpjdrpgjarsdg~pjasgasg[p[p]jqjg"),
-              CardsC(color: Colors.black12, title: "Titulo do card", description: "Descrição dos cardos:kkkkkkaskfkSFGKskfsFOPsfSPRRWPojqgjjjag~gjkrtjgjrtjg´s~gjsjdgojaewõyaergjgpgadrj~pgjaap~djghpjdrpgjarsdg~pjasgasg[p[p]jqjg"),
-              CardsC(color: Colors.black12, title: "Titulo do card", description: "Descrição dos cardos:kkkkkkaskfkSFGKskfsFOPsfSPRRWPojqgjjjag~gjkrtjgjrtjg´s~gjsjdgojaewõyaergjgpgadrj~pgjaap~djghpjdrpgjarsdg~pjasgasg[p[p]jqjg"),
-              CardsC(color: Colors.black12, title: "Titulo do card", description: "Descrição dos cardos:kkkkkkaskfkSFGKskfsFOPsfSPRRWPojqgjjjag~gjkrtjgjrtjg´s~gjsjdgojaewõyaergjgpgadrj~pgjaap~djghpjdrpgjarsdg~pjasgasg[p[p]jqjg"),
-              CardsC(color: Colors.black12, title: "Titulo do card", description: "Descrição dos cardos:kkkkkkaskfkSFGKskfsFOPsfSPRRWPojqgjjjag~gjkrtjgjrtjg´s~gjsjdgojaewõyaergjgpgadrj~pgjaap~djghpjdrpgjarsdg~pjasgasg[p[p]jqjg"),
-            ],
-          ),
-
-
-          SliverFixedExtentList(delegate: SliverChildListDelegate(
-              
-            [
-
-              Container(
-                margin: EdgeInsets.all(32.0),
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  border: Border.all(width: 2, color: Colors.red)
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.all(32.0),
-                  child: ListView(
-
-                    // This next line does the trick.
-                    scrollDirection: Axis.horizontal,
-                    children: <Widget>[
-                      Container(
-                        width: tela * 0.30,
-                        color: Colors.red,
-                        child: CarrouselSlider(),
-                      ),
-                      Container(
-                        width: tela * 0.30,
-                        color: Colors.blue,
-                        child: CarrouselSlider(),
-                      ),
-                      Container(
-                        width: tela * 0.30,
-                        color: Colors.green,
-                        child: CarrouselSlider(),
-                      ),
-                      
-                    ],
-                  ),
-                ),
-              )
-
-            ]
-          ), itemExtent: 500),
-
-
-
-
-
+      
         ],
-      ),
+      ),)
     );
   }
 }

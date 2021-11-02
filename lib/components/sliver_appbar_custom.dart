@@ -11,7 +11,6 @@ class SliverAppBarC extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var largura = MediaQuery.of(context).size.width;
-    var altura = MediaQuery.of(context).size.height;
     return Container(
       color: Definicoes.bgDrawerColor,
       //floating: true,

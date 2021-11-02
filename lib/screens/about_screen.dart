@@ -2,17 +2,18 @@ import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:auto_size_text_pk/auto_size_text_pk.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio_website_flutter/components/bigheader.dart';
 import 'package:portfolio_website_flutter/components/box_skills.dart';
 import 'package:portfolio_website_flutter/components/drawerc.dart';
+import 'package:portfolio_website_flutter/components/formacao.dart';
 import 'package:portfolio_website_flutter/components/my_card_botton.dart';
 import 'package:portfolio_website_flutter/components/my_card_top.dart';
 import 'package:portfolio_website_flutter/components/sliver_appbar_custom.dart';
 import 'package:portfolio_website_flutter/utils/listSoftSkills.dart';
 import 'package:portfolio_website_flutter/utils/list_skills.dart';
 import 'package:portfolio_website_flutter/utils/styles.dart';
+// ignore: import_of_legacy_library_into_null_safe
 import 'package:slimy_card/slimy_card.dart';
 import 'package:styled_text/styled_text.dart';
 class AboutScreen extends StatefulWidget {
@@ -95,147 +96,7 @@ class _AboutScreenState extends State<AboutScreen> {
                         
                         Padding(padding: EdgeInsets.symmetric(vertical: 10)),
 
-                        Row(
-                          children: [
-                            Icon(FontAwesomeIcons.userGraduate, color: Definicoes.twoColor,size: 30),
-                            SizedBox(width: 10,),
-                            Container(
-                              height: 50,
-                              child: Padding(
-                                padding: const EdgeInsets.only(top: 12),
-                                child: Text("Formação",
-                                  style: TextStyle(
-                                    fontSize: 30, 
-                                    color: Colors.white
-                                  ), 
-                                ),
-                              )
-                            ),
-                          ],
-                        ),
-
-                        Container(
-                          width: MediaQuery.of(context).size.width,
-                          child: Wrap(
-                            alignment: WrapAlignment.start,
-                            children: [
-
-                              SizedBox(
-                                width: 20,
-                              ),
-
-                              Padding(
-                                padding: const EdgeInsets.only(left: 20, top: 20),
-                                child: Container(
-                                  width: tela < 830 ? MediaQuery.of(context).size.width : MediaQuery.of(context).size.width * 0.25,
-                                  decoration: BoxDecoration(
-                                    color: Definicoes.bgColor,
-                                    //border: Border.all(width: 2, color: Colors.red),
-                                    borderRadius: BorderRadius.only(topRight: Radius.circular(50), bottomLeft: Radius.circular(50),),
-                                    boxShadow: [
-                                      BoxShadow(
-                                        color: Definicoes.twoColor.withOpacity(0.8),
-                                        spreadRadius: 2,
-                                        blurRadius: 10,
-                                        //offset: Offset(20.0, 15.0)
-                                      )
-                                    ],
-                                  ),
-                                    
-                                  child: Column(
-                                    children: [
-                                      Icon(FontAwesomeIcons.graduationCap, color: Definicoes.twoColor,size: 20),
-                                      Padding(padding: EdgeInsets.only(bottom: 5)),
-                                      Container(
-                                        width:  MediaQuery.of(context).size.width*90,  
-                                        child: Column(
-                                          children: [
-                                            Padding(padding: EdgeInsets.symmetric(vertical: 5)),
-                                            const AutoSizeText(
-                                              """Analise e Desenvolvimento de Sistema""",
-                                              style: TextStyle(color: Definicoes.twoColor, fontSize: 17, fontWeight: FontWeight.w600),
-                                              textAlign: TextAlign.center, 
-                                            ),
-                                            Padding(padding: EdgeInsets.symmetric(vertical: 5)),
-                                            Divider(
-                                              height: 1,
-                                              color: Definicoes.primaryColor,
-                                            ),
-                                            Padding(padding: EdgeInsets.symmetric(vertical: 2)),
-                                            Row(
-                                              mainAxisAlignment: MainAxisAlignment.center,
-                                              children: [
-                                                Expanded( flex: 1, child: Icon(Icons.account_balance_outlined,size: 17, color: Definicoes.twoColor,)),
-                                                Expanded(
-                                                  flex: 3,
-                                                  child: Column(
-                                                    children: [
-                                                      Text("IFRO",style: TextStyle(color: Colors.white, fontSize: 15),),
-                                                      const AutoSizeText(
-                                                        """Instituto Federal de Rondônia""",
-                                                        overflow: TextOverflow.ellipsis,
-                                                        style: TextStyle(color: Colors.white, fontSize: 14, fontStyle: FontStyle.italic),
-                                                        textAlign: TextAlign.center, 
-                                                      ),
-                                                    ],
-                                                  )
-                                                ),
-                                                Expanded(
-                                                  flex: 1,
-                                                  child: SizedBox(
-                                                    width: 15,
-                                                  ),                                                
-                                                ),                                        
-                                              ],
-                                            ),
-                                            Padding(padding: EdgeInsets.symmetric(vertical: 2)),
-                                            Divider(
-                                              height: 1,
-                                              color: Definicoes.primaryColor,
-                                            ),
-
-                                            Padding(padding: EdgeInsets.symmetric(vertical: 2)),
-
-                                            Row(
-                                              mainAxisAlignment: MainAxisAlignment.center,
-                                              children: [
-                                                Expanded( flex: 1, child: Icon(FontAwesomeIcons.calendarAlt,size: 17, color: Definicoes.twoColor,)),
-                                                Expanded(
-                                                  flex: 3,
-                                                  child: Column(
-                                                    children: [
-                                                      Text("2019 - 2022",style: TextStyle(color: Colors.white, fontSize: 15),),
-                                                      const AutoSizeText(
-                                                        """Emformação - 5º Período""",
-                                                        overflow: TextOverflow.ellipsis,
-                                                        style: TextStyle(color: Colors.white, fontSize: 14, fontStyle: FontStyle.italic),
-                                                        textAlign: TextAlign.center,
-                                                         
-                                                      ),
-                                                    ],
-                                                  )
-                                                ),
-                                                Expanded(
-                                                  flex: 1,
-                                                  child: SizedBox(
-                                                    width: 15,
-                                                  ),                                                
-                                                ),                                        
-                                              ],
-                                            ),
-                                            Padding(padding: EdgeInsets.symmetric(vertical: 10)),
-                                          ],
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ),
-
-                                           
-                            ],
-                          ),
-                        ),
+                        Formacao(),
                       ],
                     ),
                   ),
@@ -249,7 +110,85 @@ class _AboutScreenState extends State<AboutScreen> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Padding(padding: EdgeInsets.only(top: 20, bottom: 10)),
+                
+                Padding(padding: EdgeInsets.symmetric(vertical: 20)),
+
+                Center(
+                  child: AnimatedTextKit(
+                    animatedTexts: [
+                      ColorizeAnimatedText(
+                        'Soft Skills',
+                        textStyle: GoogleFonts.oswald(
+                          fontSize: 32.0,
+                          fontWeight: FontWeight.normal,
+                        ),
+                        colors: Definicoes.colorizeColors,
+                      ),
+                    ],
+                    repeatForever: true,
+
+                  ),
+                ),
+
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                      width: tela > 600 ? 450 : MediaQuery.of(context).size.width * 0.9 ,
+                      child: Column(
+                        children: ListSoftSkill().softSkillsList.map(
+                          (soft) => Container(
+                            margin: EdgeInsets.only(bottom: 15.0),
+                            child: Row(
+                              children: [
+                                Expanded(
+                                  flex: soft.percentage,
+                                  child: Container(
+                                    padding: EdgeInsets.only(left: 10.0),
+                                    alignment: Alignment.centerLeft,
+                                    height: 38.0,
+                                    child: Text(soft.skill, 
+                                      style: GoogleFonts.oswald(
+                                        color: Definicoes.primaryColor,
+                                        fontSize: 24.0,
+                                        fontWeight: FontWeight.normal
+                                      ),
+                                    ),
+                                    color: Colors.white,
+                                  ),
+                                ),
+                                SizedBox(
+                                  width: 10.0,
+                                ),
+                                Expanded(
+                                  // remaining (blank part)
+                                  flex: 100 - soft.percentage,
+                                  child: Divider(
+                                    color: Definicoes.threeColor,
+                                  ),
+                                ),
+                                SizedBox(
+                                  width: 10.0,
+                                ),
+                                Text(
+                                  "${soft.percentage}%",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 16.0,
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                        )
+                        .toList(),
+                      ),
+                    ),
+                  ],
+                ),
+
+                Padding(padding: EdgeInsets.symmetric(vertical: 20)),
+
                 Center(
                   child: AnimatedTextKit(
                     animatedTexts: [
@@ -320,73 +259,9 @@ class _AboutScreenState extends State<AboutScreen> {
                 Padding(padding: EdgeInsets.only(top: 20)),
 
 
-                Center(
-                  child: AnimatedTextKit(
-                    animatedTexts: [
-                      ColorizeAnimatedText(
-                        'Soft Skills',
-                        textStyle: GoogleFonts.oswald(
-                          fontSize: 32.0,
-                          fontWeight: FontWeight.normal,
-                        ),
-                        colors: Definicoes.colorizeColors,
-                      ),
-                    ],
-                    repeatForever: true,
+                
 
-                  ),
-                ),
-
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Container(
-                      width: tela > 600 ? 450 : MediaQuery.of(context).size.width * 0.9 ,
-                      child: Column(
-                        children: ListSoftSkill().softSkillsList.map(
-                          (skill) => Container(
-                            margin: EdgeInsets.only(bottom: 15.0),
-                            child: Row(
-                              children: [
-                                Expanded(
-                                  flex: skill.percentage,
-                                  child: Container(
-                                    padding: EdgeInsets.only(left: 10.0),
-                                    alignment: Alignment.centerLeft,
-                                    height: 38.0,
-                                    child: Text(skill.skill),
-                                    color: Colors.white,
-                                  ),
-                                ),
-                                SizedBox(
-                                  width: 10.0,
-                                ),
-                                Expanded(
-                                  // remaining (blank part)
-                                  flex: 100 - skill.percentage,
-                                  child: Divider(
-                                    color: Colors.white,
-                                  ),
-                                ),
-                                SizedBox(
-                                  width: 10.0,
-                                ),
-                                Text(
-                                  "${skill.percentage}%",
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 16.0,
-                                  ),
-                                )
-                              ],
-                            ),
-                          ),
-                        )
-                        .toList(),
-                      ),
-                    ),
-                  ],
-                ),
+                
 
               ],
             ),

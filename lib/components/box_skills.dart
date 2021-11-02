@@ -52,7 +52,6 @@ class BoxSkills extends StatelessWidget {
                   itemBuilder: (_, index){
                     return Padding(padding: EdgeInsets.symmetric(horizontal: 12,vertical: 20), 
                       child: Container(
-                        
                         width:110,
                         child: AnimatedCircularProgressIndicator(
                           colorC: colorProgress,

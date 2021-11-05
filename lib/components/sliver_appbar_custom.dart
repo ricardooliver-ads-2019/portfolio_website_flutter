@@ -18,7 +18,7 @@ class SliverAppBarC extends StatelessWidget {
       //shadowColor: Colors.red,
       //centerTitle: false,
       width: largura,
-      height: 80,
+      height: 60,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [

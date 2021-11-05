@@ -13,13 +13,13 @@ class BigHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(bottom: 20),
+      padding: const EdgeInsets.only(bottom: 0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Container(
-            padding: EdgeInsets.symmetric(horizontal:24, vertical: 5),
+            padding: EdgeInsets.symmetric(horizontal:24, vertical: 0),
             child: AnimatedTextKit(
               animatedTexts: [
                 ColorizeAnimatedText(

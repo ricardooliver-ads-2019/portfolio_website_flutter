@@ -36,7 +36,9 @@ dependencies:
   slimy_card: ^1.0.4
   font_awesome_flutter: ^9.2.0
   url_launcher: ^6.0.12
+  validatorless: ^1.2.1
   lottie: ^1.2.1
+  http: ^0.13.3
   
 
 dev_dependencies:
@@ -59,7 +61,6 @@ flutter:
     - images/
     - images/imgCarrocell/
     - images/imgHome/
-    - images/imgBanner/
     - images/imgIcones/
     
 

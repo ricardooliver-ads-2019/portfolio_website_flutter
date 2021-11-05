@@ -23,12 +23,12 @@ class ListCardsApps extends StatelessWidget {
     var tela = MediaQuery.of(context).size.width;
     return Center(
       child: Container(
+         height: 600,
          width: tela > 1080 ? 1080 : tela * 0.90,
         decoration: BoxDecoration(
           
         ),
-        child: Scrollbar(
-          
+        child: Scrollbar(          
           controller: controller,
           isAlwaysShown: true,
           child: ListView.builder(
@@ -36,13 +36,11 @@ class ListCardsApps extends StatelessWidget {
             itemCount: listCardsApps.length,
             scrollDirection: Axis.horizontal,
             itemBuilder: (_, index){
-              return Padding(padding: EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+              return Padding(padding: EdgeInsets.symmetric(vertical: 40, horizontal: 20),
                 child: Container(
+
                   width: 180,
-                  decoration: BoxDecoration(
-                    border: Border.all(width: 0.2, color: Definicoes.threeColor),
-    
-                  ),
+                  
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [

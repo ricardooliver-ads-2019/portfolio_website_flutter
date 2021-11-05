@@ -5,12 +5,13 @@ import 'package:flutter/painting.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio_website_flutter/components/bigheader.dart';
 import 'package:portfolio_website_flutter/components/box_skills.dart';
+import 'package:portfolio_website_flutter/components/box_softSkills.dart';
 import 'package:portfolio_website_flutter/components/drawerc.dart';
 import 'package:portfolio_website_flutter/components/formacao.dart';
 import 'package:portfolio_website_flutter/components/my_card_botton.dart';
 import 'package:portfolio_website_flutter/components/my_card_top.dart';
 import 'package:portfolio_website_flutter/components/sliver_appbar_custom.dart';
-import 'package:portfolio_website_flutter/utils/listSoftSkills.dart';
+import 'package:portfolio_website_flutter/utils/app_images.dart';
 import 'package:portfolio_website_flutter/utils/list_skills.dart';
 import 'package:portfolio_website_flutter/utils/styles.dart';
 // ignore: import_of_legacy_library_into_null_safe
@@ -41,7 +42,10 @@ class _AboutScreenState extends State<AboutScreen> {
         slivers: [
           SliverToBoxAdapter(child: SliverAppBarC()),
           SliverToBoxAdapter(
-            child: BigHeader(pagina: "Sobre Mim",),
+            child: Padding(
+              padding: const EdgeInsets.symmetric(vertical: 10),
+              child: BigHeader(pagina: "Sobre Mim",),
+            ),
           ),
           SliverToBoxAdapter(
             child: Wrap(
@@ -80,14 +84,14 @@ class _AboutScreenState extends State<AboutScreen> {
                                   'h1': StyledTextTag(
                                     style: GoogleFonts.oswald(
                                       color: Definicoes.primaryColor,
-                                      fontSize: 42.0,
+                                      fontSize: tela > 520 ? 42.0 : 24 ,
                                       fontWeight: FontWeight.normal),
                                   )
                                 },
                               ),
                               const AutoSizeText( 
                                 """tenho 28 anos, estou cursando Analise e desenvolvimento de sistemas pelo IFRO, trabalho atualmente como vigilante patrimonial, onde graças ao meu horário de trabalho por escala, (12/36), consigo ter uma boa disciplina de estudos regulares, e estou em busca de uma oportunidade de estágio como desenvolvedor de software, pois deis do início da faculdade sonho em trabalhar como desenvolvedor de sistemas, mais especificamente com desenvolvimento mobile, apesar da minha pouca experiencia nessa área, sei que com minha dedicação e força de vontade posso e vou sim me tornar um excelente desenvolvedor.""",
-                                style: TextStyle(color: Colors.white, fontSize: 17),
+                                style: TextStyle(color: Colors.white, fontSize: 16),
                                 textAlign: TextAlign.justify, 
                               ),
                             ],
@@ -130,60 +134,15 @@ class _AboutScreenState extends State<AboutScreen> {
                   ),
                 ),
 
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                Wrap(
+                  alignment: WrapAlignment.center,
+                  crossAxisAlignment: WrapCrossAlignment.center,
                   children: [
-                    Container(
-                      width: tela > 600 ? 450 : MediaQuery.of(context).size.width * 0.9 ,
-                      child: Column(
-                        children: ListSoftSkill().softSkillsList.map(
-                          (soft) => Container(
-                            margin: EdgeInsets.only(bottom: 15.0),
-                            child: Row(
-                              children: [
-                                Expanded(
-                                  flex: soft.percentage,
-                                  child: Container(
-                                    padding: EdgeInsets.only(left: 10.0),
-                                    alignment: Alignment.centerLeft,
-                                    height: 38.0,
-                                    child: Text(soft.skill, 
-                                      style: GoogleFonts.oswald(
-                                        color: Definicoes.primaryColor,
-                                        fontSize: 24.0,
-                                        fontWeight: FontWeight.normal
-                                      ),
-                                    ),
-                                    color: Colors.white,
-                                  ),
-                                ),
-                                SizedBox(
-                                  width: 10.0,
-                                ),
-                                Expanded(
-                                  // remaining (blank part)
-                                  flex: 100 - soft.percentage,
-                                  child: Divider(
-                                    color: Definicoes.threeColor,
-                                  ),
-                                ),
-                                SizedBox(
-                                  width: 10.0,
-                                ),
-                                Text(
-                                  "${soft.percentage}%",
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 16.0,
-                                  ),
-                                )
-                              ],
-                            ),
-                          ),
-                        )
-                        .toList(),
-                      ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 20),
+                      child: Image.asset(AppImages.myImg, width: 350, height: 320,),
                     ),
+                    BoxSoftSkills(),
                   ],
                 ),
 
@@ -205,6 +164,8 @@ class _AboutScreenState extends State<AboutScreen> {
 
                   ),
                 ),
+
+                Padding(padding: EdgeInsets.only(bottom: 20)),
           
                 //Cart Skills FRONT-END
                 Wrap(

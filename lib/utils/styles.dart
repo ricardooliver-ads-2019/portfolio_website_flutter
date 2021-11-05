@@ -21,5 +21,6 @@ class Definicoes{
   static const defaultDuration = Duration(seconds: 4);
   static const defaultPadding = 20.0;
   static const maxWidth = 1080;
+  static const kDefaultPadding = 20.0;
 
 }

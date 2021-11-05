@@ -37,7 +37,10 @@ class _WorksScreenState extends State<WorksScreen> {
         slivers: [
           SliverToBoxAdapter(child: SliverAppBarC()),
           SliverToBoxAdapter(
-            child: BigHeader(pagina: "Projetos",),
+            child: Padding(
+              padding: const EdgeInsets.symmetric(vertical: 10),
+              child: BigHeader(pagina: "Projetos",),
+            ),
           ),
 
           SliverToBoxAdapter(
@@ -111,7 +114,7 @@ class _WorksScreenState extends State<WorksScreen> {
 
           SliverToBoxAdapter(
             child: Container(
-              height: 475,
+              height: 500,
               decoration: BoxDecoration(
             ),
               child: ListCardsApps(),
@@ -141,14 +144,19 @@ class _WorksScreenState extends State<WorksScreen> {
 
           SliverGrid(
             gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
-              maxCrossAxisExtent: 300.0,
+              maxCrossAxisExtent: 400.0,
               mainAxisSpacing: 10.0,
-              crossAxisSpacing: 10.0,
-              childAspectRatio: 0.6,
+              crossAxisSpacing: 0,
+              childAspectRatio: 1,
+              mainAxisExtent: 350,
+
             ),
             delegate: SliverChildBuilderDelegate(
               (BuildContext context, int index) {
-                return cardsAppsWebs(img: ListCardsAppsWebs().cardsAppsWebsList[index].img, title: ListCardsAppsWebs().cardsAppsWebsList[index].title, linkRota: ListCardsAppsWebs().cardsAppsWebsList[index].rota.toString());
+                return Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 10),
+                  child: cardsAppsWebs(img: ListCardsAppsWebs().cardsAppsWebsList[index].img, title: ListCardsAppsWebs().cardsAppsWebsList[index].title, linkRota: ListCardsAppsWebs().cardsAppsWebsList[index].rota.toString()),
+                );
               },
               childCount: ListCardsAppsWebs().cardsAppsWebsList.length,
             ),

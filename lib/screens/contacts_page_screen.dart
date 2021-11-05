@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio_website_flutter/components/bigheader.dart';
+import 'package:portfolio_website_flutter/components/contact_form.dart';
 import 'package:portfolio_website_flutter/components/drawerc.dart';
 import 'package:portfolio_website_flutter/components/sliver_appbar_custom.dart';
 import 'package:portfolio_website_flutter/utils/styles.dart';
@@ -9,6 +10,7 @@ class ContactsPageScreen extends StatelessWidget {
   final ScrollController controller = ScrollController();
   @override
   Widget build(BuildContext context) {
+    var telaWigth = MediaQuery.of(context).size.width;
     return Scaffold(
       backgroundColor: Definicoes.bgColor,
       endDrawerEnableOpenDragGesture: false, // THIS WAY IT WILL NOT OPEN
@@ -20,115 +22,21 @@ class ContactsPageScreen extends StatelessWidget {
             child: BigHeader(pagina: "Contatos",),
           ),
 
-          
-
-          
-
-          SliverFixedExtentList(delegate: SliverChildListDelegate(
-              
-            [
-
-              Container(
-                margin: EdgeInsets.all(32.0),
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  border: Border.all(width: 2, color: Colors.red)
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.all(32.0),
-                  child: Scrollbar(
-                    showTrackOnHover:true,
-                    controller: controller,
-                    isAlwaysShown: true,
-                    child: ListView(
-                      controller: controller,
-                      // This next line does the trick.
-                      scrollDirection: Axis.horizontal,
-                      children: <Widget>[
-                        Container(
-                          width: 270.0,
-                          color: Colors.red,
-                        ),
-                        Container(
-                          width: 160.0,
-                          color: Colors.green,
-                        ),
-                        Container(
-                          width: 160.0,
-                          color: Colors.yellow,
-                        ),
-                        Container(
-                          width: 160.0,
-                          color: Colors.orange,
-                        ),
-                        Container(
-                          width: 160.0,
-                          color: Colors.red,
-                        ),
-                        Container(
-                          width: 160.0,
-                          color: Colors.blue,
-                        ),
-                        Container(
-                          width: 160.0,
-                          color: Colors.green,
-                        ),
-                        Container(
-                          width: 160.0,
-                          color: Colors.yellow,
-                        ),
-                        Container(
-                          width: 160.0,
-                          color: Colors.orange,
-                        ),
-                        Container(
-                          width: 160.0,
-                          color: Colors.red,
-                        ),
-                        Container(
-                          width: 160.0,
-                          color: Colors.blue,
-                        ),
-                        Container(
-                          width: 160.0,
-                          color: Colors.green,
-                        ),
-                        Container(
-                          width: 160.0,
-                          color: Colors.yellow,
-                        ),
-                        Container(
-                          width: 160.0,
-                          color: Colors.orange,
-                        ),
-                        Container(
-                          width: 160.0,
-                          color: Colors.red,
-                        ),
-                        Container(
-                          width: 160.0,
-                          color: Colors.blue,
-                        ),
-                        Container(
-                          width: 160.0,
-                          color: Colors.green,
-                        ),
-                        Container(
-                          width: 160.0,
-                          color: Colors.yellow,
-                        ),
-                        Container(
-                          width: 160.0,
-                          color: Colors.orange,
-                        ),                  
-                      ],
+          SliverToBoxAdapter(
+            child: Container(
+              child: Column(
+                children: [
+                  Container(
+                    width: telaWigth > 360 ? 350 : telaWigth * 0.9 ,
+                    decoration: BoxDecoration(
+                      border: Border.all(width: 1, color: Definicoes.primaryColor)
                     ),
+                    child: ContactForm()
                   ),
-                ),
+                ],
               )
-
-            ]
-          ), itemExtent: 500),
+            ),
+          )
           
         ]
       )

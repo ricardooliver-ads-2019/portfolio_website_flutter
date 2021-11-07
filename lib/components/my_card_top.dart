@@ -61,7 +61,7 @@ class MyCardTop extends StatelessWidget {
         ),
 
         Padding(
-          padding: const EdgeInsets.only(bottom: 10),
+          padding: const EdgeInsets.only(bottom: 30),
           child: Container(
             width: 230,
             height: 1,

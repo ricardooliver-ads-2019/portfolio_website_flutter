@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:portfolio_website_flutter/components/animacao.dart';
+import 'package:portfolio_website_flutter/components/animation_modal.dart';
 import 'package:portfolio_website_flutter/components/bigheader.dart';
 import 'package:portfolio_website_flutter/components/contact_form.dart';
 import 'package:portfolio_website_flutter/components/drawerc.dart';
@@ -9,8 +11,35 @@ import 'package:portfolio_website_flutter/utils/app_images.dart';
 import 'package:portfolio_website_flutter/utils/styles.dart';
 
 // ignore: must_be_immutable
-class ContactsPageScreen extends StatelessWidget {
+class ContactsPageScreen extends StatefulWidget {
+  @override
+  State<ContactsPageScreen> createState() => _ContactsPageScreenState();
+}
+
+class _ContactsPageScreenState extends State<ContactsPageScreen> with SingleTickerProviderStateMixin {
+  // ignore: non_constant_identifier_names
+  late final AnimationController AnimatController;
+  late final Animation<double> mouver;
+  late final Animation<double> star;
   final ScrollController controller = ScrollController();
+  var brilho = false;
+
+  @override
+  void initState(){
+    super.initState();
+    AnimatController = AnimationController(vsync: this, duration: Duration(seconds: 2));
+    mouver = Tween<double>(begin: 0, end: 0).animate(AnimatController);
+    star = Tween<double>(begin: 0, end: 2).animate(AnimatController);
+    AnimatController.forward();
+    AnimatController.repeat(reverse: true);
+  }
+
+  @override
+  void dispose(){
+    AnimatController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     var telaWigth = MediaQuery.of(context).size.width;
@@ -23,6 +52,10 @@ class ContactsPageScreen extends StatelessWidget {
           SliverToBoxAdapter(child: SliverAppBarC()),
           SliverToBoxAdapter(
             child: BigHeader(pagina: "Contatos",),
+          ),
+
+          SliverToBoxAdapter(
+            child: AnimationModal(),
           ),
 
           SliverToBoxAdapter(

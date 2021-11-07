@@ -185,7 +185,7 @@ class _ContactFormState extends State<ContactForm> {
               ],
             ),
             Padding(
-              padding: const EdgeInsets.only(bottom: 20),
+              padding: const EdgeInsets.only(bottom: 20, top: 10),
               child: Wrap(
                 alignment: WrapAlignment.spaceBetween,
                 spacing: 20,
@@ -193,7 +193,7 @@ class _ContactFormState extends State<ContactForm> {
                 children: [
                   FittedBox(
                     child: Container(
-                      height: 25,
+                      height: 24,
                       width: telaWidth > 350 ? 110 : 200,
                       decoration: BoxDecoration(
                         color: Definicoes.twoColor.withOpacity(0.2),
@@ -212,7 +212,6 @@ class _ContactFormState extends State<ContactForm> {
                               messageEC: _mesageEC.text
                             );
 
-                            clearTextEditingController();
                           }
                         },
                       ),
@@ -222,7 +221,7 @@ class _ContactFormState extends State<ContactForm> {
                   FittedBox(
                     child: Container(
 
-                      height: 25,
+                      height: 24,
                       width: telaWidth > 350 ? 110 : 200,
                       decoration: BoxDecoration(
                         color: Definicoes.twoColor.withOpacity(0.2),
@@ -235,7 +234,7 @@ class _ContactFormState extends State<ContactForm> {
                           var formValid = _formKey.currentState?.validate() ?? false;
                           if(formValid){
                             LinkWhatsapp().launchWhatsApp(_nameEC.text, _descrisionEC.text, _mesageEC.text, _emailEC.text,);
-                            clearTextEditingController();
+     
                           }
                           
                         },

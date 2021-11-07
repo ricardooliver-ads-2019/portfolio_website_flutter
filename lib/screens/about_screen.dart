@@ -6,8 +6,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio_website_flutter/components/bigheader.dart';
 import 'package:portfolio_website_flutter/components/box_skills.dart';
 import 'package:portfolio_website_flutter/components/box_softSkills.dart';
+import 'package:portfolio_website_flutter/components/card_formacao.dart';
 import 'package:portfolio_website_flutter/components/drawerc.dart';
-import 'package:portfolio_website_flutter/components/formacao.dart';
 import 'package:portfolio_website_flutter/components/my_card_botton.dart';
 import 'package:portfolio_website_flutter/components/my_card_top.dart';
 import 'package:portfolio_website_flutter/components/sliver_appbar_custom.dart';
@@ -59,7 +59,7 @@ class _AboutScreenState extends State<AboutScreen> {
                     child: SlimyCard(
                       color: Colors.white,
                       width: 270,
-                      topCardHeight: 400,
+                      topCardHeight: 445,
                       bottomCardHeight: 150,
                       topCardWidget: MyCardTop(),
                       bottomCardWidget: MyCardBotton(),
@@ -70,6 +70,7 @@ class _AboutScreenState extends State<AboutScreen> {
                 Padding(
                   padding: const EdgeInsets.only(left: 15, right: 15),
                   child: Container(
+                    //color: Colors.red,
                     width: tela > 830 ? MediaQuery.of(context).size.width * 0.6 : MediaQuery.of(context).size.width * 0.90, 
                     child: Column(
                       children: [
@@ -99,8 +100,25 @@ class _AboutScreenState extends State<AboutScreen> {
                         ),
                         
                         Padding(padding: EdgeInsets.symmetric(vertical: 10)),
-
-                        Formacao(),
+                        Wrap(
+                          alignment: WrapAlignment.start,
+                          crossAxisAlignment: WrapCrossAlignment.center,
+                          spacing: 10,
+                          runSpacing: 10,
+                          children: [
+                            Center(
+                              child: Text("Formação", 
+                                style: GoogleFonts.oswald(
+                                  color: Definicoes.primaryColor,
+                                  fontSize: 24,
+                                  fontWeight: FontWeight.bold
+                                ), 
+                              ),
+                            ),
+                            CardFormacao(),
+                          ],
+                        )
+                        
                       ],
                     ),
                   ),

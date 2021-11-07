@@ -18,6 +18,15 @@ static  const imgTelaApp2_0 = "images/imgCarrocell/telaApp2.0.png";
 static  const imgTelaApp2_1 = "images/imgCarrocell/telaApp2.1.png";
 //imagens icones hard skills
 static  const iconContactMe = "images/contact_icon.png";
+static  const iconEmail = "images/iconEmail.png";
+static  const iconEnviar = "images/iconEnviar.png";
+static  const iconEmailp = "images/iconEmail1.png";
+static  const iconWhatsaap = "images/iconWhatsapp.png";
+static  const iconInstagram = "images/iconInstagram.png";
+static  const iconPhone = "images/iconPhone.png";
+static  const iconLinkedin = "images/iconLinkedIn.png";
+static  const iconMap = "images/iconMappin.png";
+static  const iconReset = "images/iconReset1.png";
 static  const imgIconJS = "images/imgIcones/iconJS.png";
 static  const imgIconHTML = "images/imgIcones/iconHTML.png";
 static  const imgIconCSS = "images/imgIcones/iconCSS.png";

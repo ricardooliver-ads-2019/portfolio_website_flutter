@@ -18,9 +18,9 @@ class DefaultButton extends StatelessWidget {
     return TextButton(
       style: TextButton.styleFrom(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
-        primary: Definicoes.primaryColor,
+        primary: Definicoes.twoColor,
         padding: EdgeInsets.symmetric(
-        vertical: 10,
+        vertical: 0,
         horizontal: Definicoes.kDefaultPadding,
       ),
       ),
@@ -31,16 +31,17 @@ class DefaultButton extends StatelessWidget {
         press();
       },
       child: Row(
+        crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Expanded(flex: 2,child: Image.asset(imageSrc, height: 40)),
+          Expanded(flex: 2,child: Image.asset(imageSrc, height: 20)),
           Expanded(flex: 0, child: SizedBox(width: Definicoes.kDefaultPadding / 2)),
           Expanded(
-            flex: 4,
+            flex: 3,
             child: Text(text, 
               style: GoogleFonts.oswald(
                 color: Definicoes.primaryColor,
-                fontSize: 20,
+                fontSize: 15,
                 fontWeight: FontWeight.normal
               ),
             )

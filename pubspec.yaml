@@ -39,6 +39,7 @@ dependencies:
   validatorless: ^1.2.1
   lottie: ^1.2.1
   http: ^0.13.3
+  whatsapp_unilink: ^2.0.0
   
 
 dev_dependencies:

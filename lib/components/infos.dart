@@ -1,3 +1,4 @@
+import 'package:animated_card/animated_card.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio_website_flutter/utils/app_images.dart';
@@ -8,7 +9,7 @@ class Infos extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 500,
+      width: 250,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -36,12 +37,19 @@ class Infos extends StatelessWidget {
               ),
 
               Center(
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 20),
-                  child: Image.asset(AppImages.imgPerson, 
-                    width: 180, 
-                    height: 430,
-                    fit: BoxFit.contain,
+                child: Container(
+                  child: Center(
+                    child: AnimatedCard(
+                      duration: Duration(seconds: 2),
+                      direction: AnimatedCardDirection.right,
+                      child: Center(
+                        child: Image.asset(AppImages.imgPerson, 
+                          width: 180, 
+                          height: 430,
+                          fit: BoxFit.contain,
+                        ),
+                      ),
+                    ),
                   ),
                 ),
               ),

@@ -1,3 +1,5 @@
+// ignore_for_file: non_constant_identifier_names
+
 class AppRoutes{
   static final HOME = '/home';
   static final SOBRE_MIM = '/sobre-min';

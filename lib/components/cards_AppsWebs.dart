@@ -15,7 +15,7 @@ class cardsAppsWebs extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: Colors.grey[900],
+        color: Definicoes.twoColor.withOpacity(0.2),
         border: Border.all(width: 1, color: Definicoes.primaryColor),
         borderRadius: BorderRadius.circular(5)
       ),

@@ -12,10 +12,22 @@ static  const imgAvata = "images/imgAvata.png";
 static  const imgPerson = "images/imgHome/img_home_person.png";
 static  const imgHomeP = "images/imgHome/img_smartphone_home_320x640.png";
 static  const imgFundoCarrocellP = "images/imgCarrocell/imgFundoCarrocell_320x640.png";
+static  const imgPayFlowHome = "images/imgCarrocell/payFlowHome.jpg";
+static  const imgPayFlowLogin = "images/imgCarrocell/payFlowLogin.jpg";
 static  const imgTelaApp1_0 = "images/imgCarrocell/telaApp1.0.png";
 static  const imgTelaApp1_1 = "images/imgCarrocell/telaApp1.1.png";
 static  const imgTelaApp2_0 = "images/imgCarrocell/telaApp2.0.png";
 static  const imgTelaApp2_1 = "images/imgCarrocell/telaApp2.1.png";
+//imagens templetes web
+static  const imgSiteContainerloc = "images/imgSites/siteContainerloc.png";
+static  const imgSiteSerralheria = "images/imgSites/seralheriaLoja.png";
+static  const imgTelaDeLogin = "images/imgSites/TelaDeLogin.png";
+static  const imgJogoDaMemoria = "images/imgSites/jogoDaMemoria.png";
+static  const imgTelaDeCapEmail = "images/imgSites/telaDeCaptura.png";
+static  const imgLivraria = "images/imgSites/siteLivraria.png";
+static  const imgTelaSite = "images/imgSites/siteTela.png";
+
+
 //imagens icones hard skills
 static  const iconContactMe = "images/contact_icon.png";
 static  const iconEmail = "images/iconEmail.png";

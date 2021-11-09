@@ -1,3 +1,5 @@
+// ignore_for_file: non_constant_identifier_names
+
 import 'package:flutter/material.dart';
 import 'package:portfolio_website_flutter/utils/styles.dart';
 class Animacao extends StatefulWidget {
@@ -24,7 +26,7 @@ class _AnimacaoState extends State<Animacao> with SingleTickerProviderStateMixin
   void initState(){
     super.initState();
     AnimatController = AnimationController(vsync: this, duration: Duration(seconds: 2));
-    mouver = Tween<double>(begin: 0, end: 0).animate(AnimatController);
+    mouver = Tween<double>(begin: -1, end: 3).animate(AnimatController);
     star = Tween<double>(begin: 1, end: 2).animate(AnimatController);
     AnimatController.forward();
     AnimatController.repeat(reverse: true);
@@ -49,9 +51,9 @@ class _AnimacaoState extends State<Animacao> with SingleTickerProviderStateMixin
           animation: star,
           builder: (context, wiget){
             return Transform.translate(
-              offset: Offset(mouver.value, mouver.value),
+              offset: Offset(mouver.value, 0),
               child: Container(
-                width: 3,
+                width: 3.5,
                 height: 3,
                 decoration: BoxDecoration(
                   color: Definicoes.twoColor.withOpacity(0.5),
@@ -60,17 +62,13 @@ class _AnimacaoState extends State<Animacao> with SingleTickerProviderStateMixin
                     BoxShadow(
                       color: Definicoes.twoColor,
                       spreadRadius: star.value,
-                      blurRadius: 2,
-                      
-                              
+                      blurRadius: 1 * AnimatController.value,                            
                     )
-                  ]
-                              
+                  ]             
                 ),
               ),
             );
           }
-          
         ),
       ),
     );

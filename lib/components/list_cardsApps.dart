@@ -9,11 +9,9 @@ import 'package:portfolio_website_flutter/utils/styles.dart';
 class ListCardsApps extends StatelessWidget {
   final ScrollController controller = ScrollController();
   final listCardsApps = [
-    {'title' : "PayFlow", 'discricao': "Aplicativo pensado para leitura de codigo de barrar e organição dos seus Boletos", 'img': AppImages.imgTelaApp2_0},
-    {'title' : "Download-Youtube", 'discricao': "Aplicativo para baixar videos do Youtube Usando a URL do video", 'img': AppImages.imgTelaApp2_0},
-    {'title' : "Foco", 'discricao': "Aplicativo pensado para ajudar na produtividade do usuario do App", 'img': AppImages.imgTelaApp2_0},
-    {'title' : "PayFlow", 'discricao': "Aplicativo pensado para leitura de codigo de barrar e organição dos seus Boletos", 'img': AppImages.imgTelaApp2_0},
-    {'title' : "Download-Youtube", 'discricao': "Aplicativo para baixar videos do Youtube Usando a URL do video", 'img': AppImages.imgTelaApp2_0},
+    {'title' : "PayFlow - Login", 'discricao': "Aplicativo pensado para leitura de codigo de barrar e organição dos seus Boletos", 'img': AppImages.imgPayFlowLogin},
+    {'title' : "PayFlow - Home", 'discricao': "Aplicativo pensado para leitura de codigo de barrar e organição dos seus Boletos", 'img': AppImages.imgPayFlowHome},
+    //{'title' : "Download-Youtube", 'discricao': "Aplicativo para baixar videos do Youtube Usando a URL do video", 'img': AppImages.imgTelaApp2_0},
     
     
   ];
@@ -69,7 +67,7 @@ class ListCardsApps extends StatelessWidget {
                         height: 25,
                       ),
     
-                      ButtonC(rota: AppRoutes.HOME,),
+                      ButtonC(rota: AppRoutes.PROJETOS,),
                       
                     ],
                   ),

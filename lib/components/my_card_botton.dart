@@ -7,10 +7,6 @@ import 'package:url_launcher/link.dart';
 class MyCardBotton extends StatelessWidget {
   const MyCardBotton({ Key? key }) : super(key: key);
 
-  teste(){
-    print("Olá Mundo");
-  }
-
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -29,13 +25,14 @@ class MyCardBotton extends StatelessWidget {
                 return GestureDetector(
                   onTap: followLink,
                   child: Container(
+                    width: 180,
                     decoration: BoxDecoration(
-                      color: Definicoes.twoColor,
-                      border: Border.all(color: Definicoes.bgColor, width: 1),
-                      borderRadius: BorderRadius.circular(10),
+                      color: Definicoes.twoColor.withOpacity(0.2),
+                      border: Border.all(color: Definicoes.twoColor, width: 2),
+                      borderRadius: BorderRadius.circular(40),
                       boxShadow: [
                         BoxShadow(
-                          color: Definicoes.bgColor,
+                          color: Definicoes.bgColor.withOpacity(0.2),
                           spreadRadius: 2,
                           blurRadius: 2,
                           //offset: Offset(10,10)
@@ -44,18 +41,23 @@ class MyCardBotton extends StatelessWidget {
                     ),
                     child: Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-                      child: Column(
+                      child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
+                          Icon(FontAwesomeIcons.cloudDownloadAlt, color: Definicoes.threeColor, size: 25),
+                          SizedBox(
+                            width: 20,
+                          ),
                           Text("Download-CV", 
                             style: GoogleFonts.oswald(
-                              color: Definicoes.primaryColor,
-                              fontSize: 15.0,
+                              color: Definicoes.bgColor.withOpacity(0.5),
+                              fontSize: 16.0,
                               fontWeight: FontWeight.w600
                             ),
-                          ), 
-                          Icon(FontAwesomeIcons.cloudDownloadAlt, color: Definicoes.threeColor, size: 25,)
+                          ),
+                           
+                          
                         ],
                       ),
                     ),

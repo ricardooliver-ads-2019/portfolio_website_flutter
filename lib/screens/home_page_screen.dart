@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio_website_flutter/components/bigheader.dart';
 import 'package:portfolio_website_flutter/components/drawerc.dart';
 import 'package:portfolio_website_flutter/components/infos.dart';
 import 'package:portfolio_website_flutter/components/sliver_appbar_custom.dart';
@@ -19,8 +18,6 @@ class HomePageScreens extends StatelessWidget {
       body: CustomScrollView(
         slivers: [
           SliverToBoxAdapter(child: SliverAppBarC()),
-          SliverToBoxAdapter(child: BigHeader(pagina: "Home",)),
-         
           SliverToBoxAdapter(
             child: Padding(
               padding: const EdgeInsets.only(right: 20, left: 20,),

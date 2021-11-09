@@ -1,3 +1,4 @@
+import 'package:animated_card/animated_card.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -19,18 +20,25 @@ class WelkomHome extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               
-              StyledText(
-                textAlign: TextAlign.right,
-                text: '<bold><h1>Ricardo Oliveira</h1></bold>',
-                tags: {
-                  'bold': StyledTextTag(style: TextStyle(fontWeight: FontWeight.normal)),
-                  'h1': StyledTextTag(
-                    style: GoogleFonts.yellowtail(
-                      color: Definicoes.primaryColor,
-                      fontSize: telaWidth > 365 ? 55 : 38,
-                      fontWeight: FontWeight.normal),
-                  )
-                },
+              Container(
+                width: 420,
+                child: AnimatedCard(
+                  duration: Duration(seconds: 2),
+                  direction: AnimatedCardDirection.top,
+                  child: StyledText(
+                    textAlign: TextAlign.right,
+                    text: '<bold><h1>Ricardo Oliveira</h1></bold>',
+                    tags: {
+                      'bold': StyledTextTag(style: TextStyle(fontWeight: FontWeight.normal)),
+                      'h1': StyledTextTag(
+                        style: GoogleFonts.yellowtail(
+                          color: Definicoes.primaryColor,
+                          fontSize: telaWidth > 365 ? 55 : 38,
+                          fontWeight: FontWeight.normal),
+                      )
+                    },
+                  ),
+                ),
               ),
 
               Container( 
@@ -40,12 +48,16 @@ class WelkomHome extends StatelessWidget {
                   
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: <Widget>[
-                    Text(
-                      'Desenvolvedor',
-                      style: GoogleFonts.oswald(
-                        color: Definicoes.twoColor,
-                        fontSize: telaWidth > 365 ? 28 : 20,
-                        fontWeight: FontWeight.w600
+                    AnimatedCard(
+                      direction: AnimatedCardDirection.left,
+                      duration: Duration(seconds: 2),
+                      child: Text(
+                        'Desenvolvedor',
+                        style: GoogleFonts.oswald(
+                          color: Definicoes.twoColor,
+                          fontSize: telaWidth > 365 ? 28 : 20,
+                          fontWeight: FontWeight.w600
+                        ),
                       ),
                     ),
                     const SizedBox(width: 10.0,),
@@ -74,7 +86,14 @@ class WelkomHome extends StatelessWidget {
           ),
           
 
-          Image.asset(AppImages.myImg, width: 500, height: 500,)
+          Container(
+            width: 500,
+            child: AnimatedCard(
+              duration: Duration(seconds: 2),
+              direction: AnimatedCardDirection.bottom,
+              child: Image.asset(AppImages.myImg, width: 500, height: 500,)
+            ),
+          )
         ],
       ),
       

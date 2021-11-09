@@ -1,7 +1,7 @@
+import 'package:animated_card/animated_card.dart';
 import 'package:auto_size_text_pk/auto_size_text_pk.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:portfolio_website_flutter/components/bigheader.dart';
 import 'package:portfolio_website_flutter/components/cards_AppsWebs.dart';
 import 'package:portfolio_website_flutter/components/drawerc.dart';
 import 'package:portfolio_website_flutter/components/list_cardsApps.dart';
@@ -37,19 +37,16 @@ class _WorksScreenState extends State<WorksScreen> {
         slivers: [
           SliverToBoxAdapter(child: SliverAppBarC()),
           SliverToBoxAdapter(
-            child: Padding(
-              padding: const EdgeInsets.symmetric(vertical: 10),
-              child: BigHeader(pagina: "Projetos",),
-            ),
-          ),
-
-          SliverToBoxAdapter(
-            child: Center(
-              child: Text("Últimos Projetos", 
-                style: GoogleFonts.oswald(
-                  color: Definicoes.primaryColor,
-                  fontSize: 32.0,
-                  fontWeight: FontWeight.normal
+            child: AnimatedCard(
+              direction: AnimatedCardDirection.top,
+              duration: Duration(seconds: 2),
+              child: Center(
+                child: Text("Últimos Projetos", 
+                  style: GoogleFonts.oswald(
+                    color: Definicoes.primaryColor,
+                    fontSize: 32.0,
+                    fontWeight: FontWeight.normal
+                  ),
                 ),
               ),
             ),
@@ -62,7 +59,11 @@ class _WorksScreenState extends State<WorksScreen> {
               children: [
                 Center(
                   child: Container(
-                    child: Image.asset(AppImages.imgFundoWorks, fit: BoxFit.fill,),
+                    child: AnimatedCard(
+                      direction: AnimatedCardDirection.top,
+                      duration: Duration(seconds: 2),
+                      child: Center(child: Image.asset(AppImages.imgFundoWorks, fit: BoxFit.fill,))
+                    ),
                     width: tela > 1080  ? 1080 : tela * 0.9,
                     height: 700,
                     
@@ -72,11 +73,19 @@ class _WorksScreenState extends State<WorksScreen> {
                   padding: const EdgeInsets.only(top: 12),
                   child: Center(
                     child: Container(
-                      child: Image(image: AssetImage(AppImages.imgFundoCarrocellP),fit: BoxFit.fill,),
+                      child: AnimatedCard(
+                        direction: AnimatedCardDirection.bottom,
+                        duration: Duration(seconds: 2),
+                        child: Center(child: Image(image: AssetImage(AppImages.imgFundoCarrocellP),fit: BoxFit.fill,))
+                      ),
                     ),
                   ),
                 ),
-                Center(child: CarrouselSlider()),
+                AnimatedCard(
+                  direction: AnimatedCardDirection.left,
+                  duration: Duration(seconds: 2),
+                  child: Center(child: CarrouselSlider())
+                ),
               ]
             ),
           ),

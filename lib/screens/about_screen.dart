@@ -1,9 +1,9 @@
+import 'package:animated_card/animated_card.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:auto_size_text_pk/auto_size_text_pk.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:portfolio_website_flutter/components/bigheader.dart';
 import 'package:portfolio_website_flutter/components/box_skills.dart';
 import 'package:portfolio_website_flutter/components/box_softSkills.dart';
 import 'package:portfolio_website_flutter/components/card_formacao.dart';
@@ -44,7 +44,6 @@ class _AboutScreenState extends State<AboutScreen> {
           SliverToBoxAdapter(
             child: Padding(
               padding: const EdgeInsets.symmetric(vertical: 10),
-              child: BigHeader(pagina: "Sobre Mim",),
             ),
           ),
           SliverToBoxAdapter(
@@ -56,13 +55,18 @@ class _AboutScreenState extends State<AboutScreen> {
                   padding: const EdgeInsets.only(left: 15, right: 15),
                   child: Container(
                     width: 270,
-                    child: SlimyCard(
-                      color: Colors.white,
-                      width: 270,
-                      topCardHeight: 445,
-                      bottomCardHeight: 150,
-                      topCardWidget: MyCardTop(),
-                      bottomCardWidget: MyCardBotton(),
+                    child: AnimatedCard(
+                      direction: AnimatedCardDirection.bottom,
+                      
+                      child: SlimyCard(
+                        slimeEnabled: true,
+                        color: Color(0xFF54F7C8),
+                        width: 270,
+                        topCardHeight: 445,
+                        bottomCardHeight: 150,
+                        topCardWidget: AnimatedCard(duration: Duration(seconds: 1),direction: AnimatedCardDirection.left,child: MyCardTop()),
+                        bottomCardWidget: MyCardBotton(),
+                      ),
                     ),
                   ),
                 ),
@@ -78,22 +82,30 @@ class _AboutScreenState extends State<AboutScreen> {
                           width:  MediaQuery.of(context).size.width * 0.90,
                           child: Wrap(
                             children: [
-                              StyledText(
-                                text: '<bold><h1>Olá! Eu sou o Ricardo Oliveira,</h1></bold>',
-                                tags: {
-                                  'bold': StyledTextTag(style: TextStyle(fontWeight: FontWeight.normal)),
-                                  'h1': StyledTextTag(
-                                    style: GoogleFonts.oswald(
-                                      color: Definicoes.primaryColor,
-                                      fontSize: tela > 520 ? 42.0 : 24 ,
-                                      fontWeight: FontWeight.normal),
-                                  )
-                                },
+                              AnimatedCard(
+                                direction: AnimatedCardDirection.top,
+                                duration: Duration(seconds: 2),
+                                child: StyledText(
+                                  text: '<bold><h1>Olá! Eu sou o Ricardo Oliveira,</h1></bold>',
+                                  tags: {
+                                    'bold': StyledTextTag(style: TextStyle(fontWeight: FontWeight.normal)),
+                                    'h1': StyledTextTag(
+                                      style: GoogleFonts.oswald(
+                                        color: Definicoes.primaryColor,
+                                        fontSize: tela > 520 ? 42.0 : 24 ,
+                                        fontWeight: FontWeight.normal),
+                                    )
+                                  },
+                                ),
                               ),
-                              const AutoSizeText( 
-                                """tenho 28 anos, estou cursando Analise e desenvolvimento de sistemas pelo IFRO, trabalho atualmente como vigilante patrimonial, onde graças ao meu horário de trabalho por escala, (12/36), consigo ter uma boa disciplina de estudos regulares, e estou em busca de uma oportunidade de estágio como desenvolvedor de software, pois deis do início da faculdade sonho em trabalhar como desenvolvedor de sistemas, mais especificamente com desenvolvimento mobile, apesar da minha pouca experiencia nessa área, sei que com minha dedicação e força de vontade posso e vou sim me tornar um excelente desenvolvedor.""",
-                                style: TextStyle(color: Colors.white, fontSize: 16),
-                                textAlign: TextAlign.justify, 
+                              AnimatedCard(
+                                direction: AnimatedCardDirection.right,
+                                duration: Duration(seconds: 2),
+                                child: const AutoSizeText( 
+                                  """tenho 28 anos, estou cursando Analise e desenvolvimento de sistemas pelo IFRO, trabalho atualmente como vigilante patrimonial, onde graças ao meu horário de trabalho por escala, (12/36), consigo ter uma boa disciplina de estudos regulares, e estou em busca de uma oportunidade de estágio como desenvolvedor de software, pois deis do início da faculdade sonho em trabalhar como desenvolvedor de sistemas, mais especificamente com desenvolvimento mobile, apesar da minha pouca experiencia nessa área, sei que com minha dedicação e força de vontade posso e vou sim me tornar um excelente desenvolvedor.""",
+                                  style: TextStyle(color: Colors.white, fontSize: 16),
+                                  textAlign: TextAlign.justify, 
+                                ),
                               ),
                             ],
                           ),
@@ -115,7 +127,11 @@ class _AboutScreenState extends State<AboutScreen> {
                                 ), 
                               ),
                             ),
-                            CardFormacao(),
+                            AnimatedCard(
+                              direction: AnimatedCardDirection.left,
+                              duration: Duration(seconds: 2),
+                              child: CardFormacao()
+                            ),
                           ],
                         )
                         

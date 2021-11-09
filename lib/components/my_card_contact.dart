@@ -1,3 +1,4 @@
+import 'package:animated_card/animated_card.dart';
 import 'package:auto_size_text_pk/auto_size_text_pk.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -44,16 +45,24 @@ class _MyCardContactState extends State<MyCardContact> {
                           Row(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Image(image: AssetImage(AppImages.iconPhone),width: telaWidth > 400 ? 40 : 25,),
-                              SizedBox( width: telaWidth > 400 ? 20 : 10),
-                              AutoSizeText(
-                                "(69) - 992420483",
-                                style: GoogleFonts.oswald(
-                                  color: Definicoes.twoColor,
-                                  fontSize: telaWidth > 400 ? 18 : 16,
-                                ), 
+                              AnimatedCard(
+                                direction: AnimatedCardDirection.left,
+                                duration: Duration(milliseconds: 2550),
+                                child: Image(image: AssetImage(AppImages.iconPhone),width: telaWidth > 400 ? 40 : 25,)
                               ),
-                             
+                              SizedBox( width: telaWidth > 400 ? 20 : 10),
+                              AnimatedCard(
+                                direction: AnimatedCardDirection.top,
+                                duration: Duration(milliseconds: 2550),
+                                child: AutoSizeText(
+                                  "(69) - 992420483",
+                                  style: GoogleFonts.oswald(
+                                    color: Definicoes.twoColor,
+                                    fontSize: telaWidth > 400 ? 18 : 16,
+                                  ), 
+                                ),
+                              ),
+                                                           
                             ],
                           ),
             
@@ -61,14 +70,22 @@ class _MyCardContactState extends State<MyCardContact> {
                           Row(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Image(image: AssetImage(AppImages.iconEmailp),width: telaWidth > 400 ? 40 : 25,),
+                              AnimatedCard(
+                                direction: AnimatedCardDirection.left,
+                                duration: Duration(milliseconds: 2550),
+                                child: Image(image: AssetImage(AppImages.iconEmailp),width: telaWidth > 400 ? 40 : 25,)
+                              ),
                               SizedBox( width: telaWidth > 400 ? 20 : 10),
-                              AutoSizeText(
-                                "ricardooliver.ads.2019@gmail.com", 
-                                style: GoogleFonts.oswald(
-                                  color: Definicoes.twoColor,
-                                  fontSize: telaWidth > 400 ? 18 : 16,
-                                ), 
+                              AnimatedCard(
+                                direction: AnimatedCardDirection.top,
+                                duration: Duration(milliseconds: 2550),
+                                child: AutoSizeText(
+                                  "ricardooliver.ads.2019@gmail.com",
+                                  style: GoogleFonts.oswald(
+                                    color: Definicoes.twoColor,
+                                    fontSize: telaWidth > 400 ? 18 : 16,
+                                  ), 
+                                ),
                               ),
                             ],
                           ),
@@ -77,14 +94,22 @@ class _MyCardContactState extends State<MyCardContact> {
                           Row(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Image(image: AssetImage(AppImages.iconLinkedin),width: telaWidth > 400 ? 40 : 25,),
+                              AnimatedCard(
+                                direction: AnimatedCardDirection.left,
+                                duration: Duration(milliseconds: 2550),
+                                child: Image(image: AssetImage(AppImages.iconLinkedin),width: telaWidth > 400 ? 40 : 25,)
+                              ),
                               SizedBox( width: telaWidth > 400 ? 20 : 10),
-                              AutoSizeText(
-                                "ricardo-oliveira-ads",
-                                style: GoogleFonts.oswald(
-                                  color: Definicoes.twoColor,
-                                  fontSize: telaWidth > 400 ? 18 : 16,
-                                ), 
+                              AnimatedCard(
+                                direction: AnimatedCardDirection.top,
+                                duration: Duration(milliseconds: 2550),
+                                child: AutoSizeText(
+                                  "ricardo-oliveira-ads",
+                                  style: GoogleFonts.oswald(
+                                    color: Definicoes.twoColor,
+                                    fontSize: telaWidth > 400 ? 18 : 16,
+                                  ), 
+                                ),
                               ),
                             ],
                           ),
@@ -93,14 +118,22 @@ class _MyCardContactState extends State<MyCardContact> {
                           Row(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Image(image: AssetImage(AppImages.iconInstagram),width: telaWidth > 400 ? 40 : 25,),
+                              AnimatedCard(
+                                direction: AnimatedCardDirection.left,
+                                duration: Duration(milliseconds: 2550),
+                                child: Image(image: AssetImage(AppImages.iconInstagram),width: telaWidth > 400 ? 40 : 25,)
+                              ),
                               SizedBox( width: telaWidth > 400 ? 20 : 10),
-                              AutoSizeText(
-                                "ricardooliver.ads",
-                                style: GoogleFonts.oswald(
-                                  color: Definicoes.twoColor,
-                                  fontSize: telaWidth > 400 ? 18 : 16,
-                                ), 
+                              AnimatedCard(
+                                direction: AnimatedCardDirection.top,
+                                duration: Duration(milliseconds: 2550),
+                                child: AutoSizeText(
+                                  "ricardooliver.ads",
+                                  style: GoogleFonts.oswald(
+                                    color: Definicoes.twoColor,
+                                    fontSize: telaWidth > 400 ? 18 : 16,
+                                  ), 
+                                ),
                               ),
                             ],
                           ),
@@ -117,27 +150,35 @@ class _MyCardContactState extends State<MyCardContact> {
 
             Positioned(
               top: 0,
-              child: Container(
-                width: 151,
-                height: 151,
-                decoration: BoxDecoration(
-                  color: Definicoes.primaryColor,
-                  shape: BoxShape.circle,
-                  border: Border.all(color: Definicoes.primaryColor, width: 10),
+              child: AnimatedCard(
+                direction: AnimatedCardDirection.top,
+                duration: Duration(milliseconds: 2550),
+                child: Container(
+                  width: 151,
+                  height: 151,
+                  decoration: BoxDecoration(
+                    color: Definicoes.primaryColor,
+                    shape: BoxShape.circle,
+                    border: Border.all(color: Definicoes.primaryColor, width: 10),
+                  ),
                 ),
               ),
             ),
 
             Positioned(
               top: 0.5,
-              child: Container(
-                width: 150,
-                height: 150,
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  border: Border.all(color: Definicoes.bgColor, width: 9),
-                  image: DecorationImage(image: AssetImage(AppImages.imgAvata))
-            
+              child: AnimatedCard(
+                direction: AnimatedCardDirection.top,
+                duration: Duration(milliseconds: 2550),
+                child: Container(
+                  width: 150,
+                  height: 150,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    border: Border.all(color: Definicoes.bgColor, width: 9),
+                    image: DecorationImage(image: AssetImage(AppImages.imgAvata))
+                          
+                  ),
                 ),
               ),
             ),

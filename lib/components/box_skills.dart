@@ -1,3 +1,4 @@
+import 'package:animated_card/animated_card.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio_website_flutter/utils/animated_progress_indicator.dart';
 import 'package:portfolio_website_flutter/utils/styles.dart';
@@ -37,31 +38,38 @@ class BoxSkills extends StatelessWidget {
           ),
           Padding(
             padding: const EdgeInsets.all(32.0),
-            child: Container(
-              
-              width: 420,
-              height: 200,
-              child: Scrollbar(
-                showTrackOnHover:true,
-                controller: controller,
-                isAlwaysShown: true,
-                child: ListView.builder(
+            child: AnimatedCard(
+              direction: AnimatedCardDirection.right,
+              duration: Duration(seconds: 5),
+              child: Container(
+                width: 420,
+                height: 200,
+                child: Scrollbar(
+                  showTrackOnHover:true,
                   controller: controller,
-                  scrollDirection: Axis.horizontal,
-                  itemCount: lista.length,
-                  itemBuilder: (_, index){
-                    return Padding(padding: EdgeInsets.symmetric(horizontal: 12,vertical: 20), 
-                      child: Container(
-                        width:110,
-                        child: AnimatedCircularProgressIndicator(
-                          colorC: colorProgress,
-                          img: lista[index]['img'],
-                          label: lista[index]['title'],
-                          percentage: lista[index]['porcetage'],
+                  isAlwaysShown: true,
+                  child: ListView.builder(
+                    controller: controller,
+                    scrollDirection: Axis.horizontal,
+                    itemCount: lista.length,
+                    itemBuilder: (_, index){
+                      return Padding(padding: EdgeInsets.symmetric(horizontal: 12,vertical: 20), 
+                        child: AnimatedCard(
+                          direction: AnimatedCardDirection.bottom,
+                          duration: Duration(seconds: 1),
+                          child: Container(
+                            width:110,
+                            child: AnimatedCircularProgressIndicator(
+                              colorC: colorProgress,
+                              img: lista[index]['img'],
+                              label: lista[index]['title'],
+                              percentage: lista[index]['porcetage'],
+                            ),
+                          ),
                         ),
-                      ),
-                    );
-                  },
+                      );
+                    },
+                  ),
                 ),
               ),
             ),

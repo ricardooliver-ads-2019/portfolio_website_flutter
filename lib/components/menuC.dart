@@ -23,7 +23,7 @@ class MenuC extends StatelessWidget {
               child: Text("$title", 
                   style: TextStyle(
                     color: Definicoes.twoColor,
-                    fontSize: 15.0,
+                    fontSize: 17.0,
                     fontWeight: FontWeight.bold,
                   ),
                 textAlign: TextAlign.center,

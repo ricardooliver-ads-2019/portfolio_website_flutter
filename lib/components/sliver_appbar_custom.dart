@@ -1,3 +1,4 @@
+import 'package:animated_card/animated_card.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio_website_flutter/app_routes.dart';
 import 'package:portfolio_website_flutter/components/box_logo.dart';
@@ -18,13 +19,17 @@ class SliverAppBarC extends StatelessWidget {
       //shadowColor: Colors.red,
       //centerTitle: false,
       width: largura,
-      height: 60,
+      height: 80,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Padding(
             padding: const EdgeInsets.only(left: 24),
-            child: BoxLogo(),
+            child: AnimatedCard(
+              direction: AnimatedCardDirection.top,
+              duration: Duration(seconds: 2),
+              child: BoxLogo()
+            ),
           ),
           Container(
           child: largura < 680 
@@ -38,19 +43,23 @@ class SliverAppBarC extends StatelessWidget {
               icon: Icon(Icons.menu_rounded, size: 32, color: Definicoes.primaryColor,)
             ),
           ) 
-          : Row(
-            children: [
-              MenuC(title: "HOME", routeName: AppRoutes.HOME,),
-              Padding(padding: EdgeInsets.only(right: 20)),
-              MenuC(title: "SOBRE", routeName: AppRoutes.SOBRE_MIM,),
-              Padding(padding: EdgeInsets.only(right: 20)),
-              MenuC(title: "PROJETOS", routeName: AppRoutes.PROJETOS,),
-              Padding(padding: EdgeInsets.only(right: 20)),
-              Padding(
-                padding: const EdgeInsets.only(right: 24),
-                child: MenuC(title: "CONTATOS", routeName: AppRoutes.CONTATOS,),
-              ),
-            ],
+          : AnimatedCard(
+            direction: AnimatedCardDirection.right,
+            duration: Duration(seconds: 2),
+            child: Row(
+              children: [
+                MenuC(title: "HOME", routeName: AppRoutes.HOME,),
+                Padding(padding: EdgeInsets.only(right: 20)),
+                MenuC(title: "SOBRE", routeName: AppRoutes.SOBRE_MIM,),
+                Padding(padding: EdgeInsets.only(right: 20)),
+                MenuC(title: "PROJETOS", routeName: AppRoutes.PROJETOS,),
+                Padding(padding: EdgeInsets.only(right: 20)),
+                Padding(
+                  padding: const EdgeInsets.only(right: 24),
+                  child: MenuC(title: "CONTATOS", routeName: AppRoutes.CONTATOS,),
+                ),
+              ],
+            ),
           ) 
 
         )

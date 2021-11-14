@@ -15,29 +15,14 @@ class ContactsPageScreen extends StatefulWidget {
   State<ContactsPageScreen> createState() => _ContactsPageScreenState();
 }
 
-class _ContactsPageScreenState extends State<ContactsPageScreen> with SingleTickerProviderStateMixin {
-  // ignore: non_constant_identifier_names
-  late final AnimationController AnimatController;
-  late final Animation<double> mouver;
-  late final Animation<double> star;
-  final ScrollController controller = ScrollController();
-  var brilho = false;
+class _ContactsPageScreenState extends State<ContactsPageScreen> {
 
-  @override
-  void initState(){
-    super.initState();
-    AnimatController = AnimationController(vsync: this, duration: Duration(seconds: 2));
-    mouver = Tween<double>(begin: 0, end: 0).animate(AnimatController);
-    star = Tween<double>(begin: 0, end: 2).animate(AnimatController);
-    AnimatController.forward();
-    AnimatController.repeat(reverse: true);
+  void delay(){
+    Future.delayed(Duration(seconds: 5), () {
+   print(" This line is execute after 5 seconds");
+  });
   }
 
-  @override
-  void dispose(){
-    AnimatController.dispose();
-    super.dispose();
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -52,7 +37,7 @@ class _ContactsPageScreenState extends State<ContactsPageScreen> with SingleTick
           SliverToBoxAdapter(
             child: Stack(
               children: [
-                AnimationModal(),
+                //AnimationModal(),
                 Column(
                   children: [
                     Container(
@@ -109,7 +94,7 @@ class _ContactsPageScreenState extends State<ContactsPageScreen> with SingleTick
                                     direction: AnimatedCardDirection.right,
                                     duration: Duration(seconds: 2),
                                     child: Container(
-                                      height: telaWigth > 400 ? 434 : 500,
+                                      height: telaWigth > 400 ? 450 : 500,
                                       width: telaWigth > 550 ? 400 : telaWigth * 0.95,
                                       decoration: BoxDecoration(
                                         border: Border.all(width: 1, color: Definicoes.primaryColor)

@@ -5,12 +5,12 @@ import 'package:flutter/widgets.dart';
 import 'package:portfolio_website_flutter/utils/app_images.dart';
 
 final List<String> imgList = [
-  AppImages.imgPayFlowLogin,
-  AppImages.imgPayFlowHome,
-  AppImages.imgTelaApp2_0,
-  AppImages.imgTelaApp2_1,
-  AppImages.imgTelaApp1_0,
-  AppImages.imgTelaApp1_1,
+  AppImages.imgCarrocellPayFlowLogin,
+  AppImages.imgCarrocellPayFlowHome,
+  AppImages.imgCarrocellTelaApp20,
+  AppImages.imgCarrocellTelaApp21,
+  AppImages.imgCarrocellTelaApp11,
+  AppImages.imgCarrocellTelaApp12,
   
 ];
 

@@ -22,7 +22,7 @@ class CardFormacao extends StatelessWidget {
             top: 20,
             child: Container(
               width: telaWidth > 350 ? 265 : telaWidth * 0.8,
-              height: 250,
+              height: telaWidth > 350 ? 250 : 265,
               decoration: BoxDecoration(
                 //color: Colors.green,
                 border: Border.all(width: 1, color: Definicoes.primaryColor),

@@ -16,20 +16,20 @@ class _MyCardContactState extends State<MyCardContact> {
   Widget build(BuildContext context) {
     var telaWidth = MediaQuery.of(context).size.width;
     return Container(
-      width: telaWidth > 550? 410 : telaWidth * 1,
+      width: telaWidth > 550 ? 380 : telaWidth * 0.95,
       height: 450,
       child: Center(
         child: Stack(
           alignment: AlignmentDirectional.center,
           children: [
-            
+
             Positioned(
               top: 75,
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: Container(
-                  width: telaWidth >550 ? 400 : telaWidth * 0.95,
-                  height: 360,
+                  width: telaWidth >550 ? 300 : telaWidth * 0.95,
+                  height: telaWidth >400 ? 330 : 300,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
                     color: Definicoes.twoColor.withOpacity(0.1),
@@ -58,7 +58,7 @@ class _MyCardContactState extends State<MyCardContact> {
                                   "(69) - 992420483",
                                   style: GoogleFonts.oswald(
                                     color: Definicoes.twoColor,
-                                    fontSize: telaWidth > 400 ? 18 : 16,
+                                    fontSize: 16,
                                   ), 
                                 ),
                               ),
@@ -83,7 +83,7 @@ class _MyCardContactState extends State<MyCardContact> {
                                   "ricardooliver.ads.2019@gmail.com",
                                   style: GoogleFonts.oswald(
                                     color: Definicoes.twoColor,
-                                    fontSize: telaWidth > 400 ? 18 : 16,
+                                    fontSize: 16,
                                   ), 
                                 ),
                               ),
@@ -107,7 +107,7 @@ class _MyCardContactState extends State<MyCardContact> {
                                   "ricardo-oliveira-ads",
                                   style: GoogleFonts.oswald(
                                     color: Definicoes.twoColor,
-                                    fontSize: telaWidth > 400 ? 18 : 16,
+                                    fontSize: 16,
                                   ), 
                                 ),
                               ),
@@ -131,7 +131,7 @@ class _MyCardContactState extends State<MyCardContact> {
                                   "ricardooliver.ads",
                                   style: GoogleFonts.oswald(
                                     color: Definicoes.twoColor,
-                                    fontSize: telaWidth > 400 ? 18 : 16,
+                                    fontSize: 16,
                                   ), 
                                 ),
                               ),
@@ -148,25 +148,9 @@ class _MyCardContactState extends State<MyCardContact> {
               ),
             ),
 
-            Positioned(
-              top: 0,
-              child: AnimatedCard(
-                direction: AnimatedCardDirection.top,
-                duration: Duration(milliseconds: 2550),
-                child: Container(
-                  width: 151,
-                  height: 151,
-                  decoration: BoxDecoration(
-                    color: Definicoes.primaryColor,
-                    shape: BoxShape.circle,
-                    border: Border.all(color: Definicoes.primaryColor, width: 10),
-                  ),
-                ),
-              ),
-            ),
 
             Positioned(
-              top: 0.5,
+              top: 0,
               child: AnimatedCard(
                 direction: AnimatedCardDirection.top,
                 duration: Duration(milliseconds: 2550),
@@ -175,8 +159,8 @@ class _MyCardContactState extends State<MyCardContact> {
                   height: 150,
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
-                    border: Border.all(color: Definicoes.bgColor, width: 9),
-                    image: DecorationImage(image: AssetImage(AppImages.imgAvata))
+                    //border: Border.all(color: Definicoes.bgColor, width: 9),
+                    image: DecorationImage(image: AssetImage(AppImages.imgAvata),fit: BoxFit.fill,)
                           
                   ),
                 ),

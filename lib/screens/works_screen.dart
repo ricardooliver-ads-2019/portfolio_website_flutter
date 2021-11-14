@@ -37,24 +37,6 @@ class _WorksScreenState extends State<WorksScreen> {
         slivers: [
           SliverToBoxAdapter(child: SliverAppBarC()),
           SliverToBoxAdapter(
-            child: AnimatedCard(
-              direction: AnimatedCardDirection.top,
-              duration: Duration(seconds: 2),
-              child: Center(
-                child: Text("Últimos Projetos", 
-                  style: GoogleFonts.oswald(
-                    color: Definicoes.primaryColor,
-                    fontSize: 32.0,
-                    fontWeight: FontWeight.normal
-                  ),
-                ),
-              ),
-            ),
-          ),
-
-
-
-          SliverToBoxAdapter(
             child: Stack(
               children: [
                 Center(
@@ -65,7 +47,7 @@ class _WorksScreenState extends State<WorksScreen> {
                       child: Center(child: Image.asset(AppImages.imgFundoWorks, fit: BoxFit.fill,))
                     ),
                     width: tela > 1080  ? 1080 : tela * 0.9,
-                    height: 700,
+                    height: 600,
                     
                   ),
                 ),
@@ -94,13 +76,12 @@ class _WorksScreenState extends State<WorksScreen> {
     
             child: Column(
               children: [
-                Padding(padding: EdgeInsets.fromLTRB(20, 20, 20, 10),
+                Padding(padding: EdgeInsets.symmetric(vertical: 20, horizontal: 20),
                   child: Container(
                     width: tela > 800 ? 790 : tela * 0.9,
-                    height: MediaQuery.of(context).size.height * 0.15,
                     child: const AutoSizeText(
-                      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets",
-                      style: TextStyle(color: Colors.white, fontSize: 17),
+                      "Conheça um pouco do resultado do meus estudos, você encontrará aplicativos desenvolvidos com Flutter, Dart e Firebase e também encontrará Site, Sistemas Webs e Também algumas telas webs criadas apenas para prática.",
+                      style: TextStyle(color: Colors.white, fontSize: 20),
                       textAlign: TextAlign.justify, 
                     ),
                   ),
@@ -123,7 +104,7 @@ class _WorksScreenState extends State<WorksScreen> {
 
           SliverToBoxAdapter(
             child: Container(
-              height: 500,
+              height: 450,
               decoration: BoxDecoration(
             ),
               child: ListCardsApps(),

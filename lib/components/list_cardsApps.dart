@@ -10,7 +10,7 @@ class ListCardsApps extends StatelessWidget {
   final ScrollController controller = ScrollController();
   final listCardsApps = [
     {'title' : "PayFlow - Login", 'discricao': "Aplicativo pensado para leitura de codigo de barrar e organição dos seus Boletos", 'img': AppImages.imgPayFlowLogin},
-    {'title' : "PayFlow - Home", 'discricao': "Aplicativo pensado para leitura de codigo de barrar e organição dos seus Boletos", 'img': AppImages.imgPayFlowHome},
+    {'title' : "PayFlow - Home", 'discricao': "Aplicativo pensado para leitura de codigo de barrar e organição dos seus Boletos", 'img': AppImages.imgPayFlowHome},    
     //{'title' : "Download-Youtube", 'discricao': "Aplicativo para baixar videos do Youtube Usando a URL do video", 'img': AppImages.imgTelaApp2_0},
     
     
@@ -21,10 +21,9 @@ class ListCardsApps extends StatelessWidget {
     var tela = MediaQuery.of(context).size.width;
     return Center(
       child: Container(
-         height: 600,
+         height: 450,
          width: tela > 1080 ? 1080 : tela * 0.90,
         decoration: BoxDecoration(
-          
         ),
         child: Scrollbar(          
           controller: controller,
@@ -34,7 +33,7 @@ class ListCardsApps extends StatelessWidget {
             itemCount: listCardsApps.length,
             scrollDirection: Axis.horizontal,
             itemBuilder: (_, index){
-              return Padding(padding: EdgeInsets.symmetric(vertical: 40, horizontal: 20),
+              return Padding(padding: EdgeInsets.symmetric(vertical: 20, horizontal: 10),
                 child: Container(
 
                   width: 180,

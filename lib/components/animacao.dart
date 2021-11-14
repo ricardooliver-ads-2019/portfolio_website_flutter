@@ -4,11 +4,11 @@ import 'package:flutter/material.dart';
 import 'package:portfolio_website_flutter/utils/styles.dart';
 class Animacao extends StatefulWidget {
   final int pTop;
-  final int pBotton;
+  //final int pBotton;
   final int pLeft;
   final int pRight;
 
-  Animacao({ Key? key, required this.pTop, required this.pBotton, required this.pLeft, required this.pRight, }) : super(key: key);
+  Animacao({ Key? key, required this.pTop, required this.pLeft, required this.pRight, }) : super(key: key);
 
 
   @override
@@ -17,8 +17,8 @@ class Animacao extends StatefulWidget {
 
 class _AnimacaoState extends State<Animacao> with SingleTickerProviderStateMixin {
   late final AnimationController AnimatController;
-  late final Animation<double> mouver;
   late final Animation<double> star;
+  late final Animation<double> radiusStar;
 
 
 
@@ -26,8 +26,8 @@ class _AnimacaoState extends State<Animacao> with SingleTickerProviderStateMixin
   void initState(){
     super.initState();
     AnimatController = AnimationController(vsync: this, duration: Duration(seconds: 2));
-    mouver = Tween<double>(begin: -1, end: 3).animate(AnimatController);
     star = Tween<double>(begin: 1, end: 2).animate(AnimatController);
+    radiusStar = Tween<double>(begin: 0, end: 1).animate(AnimatController);
     AnimatController.forward();
     AnimatController.repeat(reverse: true);
   }
@@ -44,28 +44,25 @@ class _AnimacaoState extends State<Animacao> with SingleTickerProviderStateMixin
     return Positioned(
       top: widget.pTop.toDouble(),
       left: widget.pLeft.toDouble(),
-      bottom: widget.pBotton.toDouble(),
+      //bottom: widget.pBotton.toDouble(),
       right: widget.pRight.toDouble(),
       child: Center(
         child: AnimatedBuilder(
           animation: star,
           builder: (context, wiget){
-            return Transform.translate(
-              offset: Offset(mouver.value, 0),
-              child: Container(
-                width: 3.5,
-                height: 3,
-                decoration: BoxDecoration(
-                  color: Definicoes.twoColor.withOpacity(0.5),
-                  shape: BoxShape.circle,
-                  boxShadow: [
-                    BoxShadow(
-                      color: Definicoes.twoColor,
-                      spreadRadius: star.value,
-                      blurRadius: 1 * AnimatController.value,                            
-                    )
-                  ]             
-                ),
+            return Container(
+              width: 1,
+              height: 1,
+              decoration: BoxDecoration(
+                color: Definicoes.twoColor.withOpacity(0.5),
+                shape: BoxShape.circle,
+                boxShadow: [
+                  BoxShadow(
+                    color: Definicoes.twoColor.withOpacity(1),
+                    spreadRadius: radiusStar.value,
+                    blurRadius: star.value,                            
+                  )
+                ]             
               ),
             );
           }

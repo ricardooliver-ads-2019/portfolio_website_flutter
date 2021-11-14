@@ -1,5 +1,4 @@
 import 'package:animated_card/animated_card.dart';
-import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:auto_size_text_pk/auto_size_text_pk.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
@@ -133,7 +132,99 @@ class _AboutScreenState extends State<AboutScreen> {
                               child: CardFormacao()
                             ),
                           ],
-                        )
+                        ),
+
+                        Padding(padding: EdgeInsets.symmetric(vertical: 20)),
+                        Center(
+                          child:Text(
+                            'Soft Skills',
+                            style: GoogleFonts.oswald(
+                              color: Definicoes.threeColor,
+                              fontSize: 32.0,
+                              fontWeight: FontWeight.normal,
+                            ),
+                          ),
+                        ),
+
+                        Padding(padding: EdgeInsets.symmetric(vertical: 20)),
+                        
+                        Wrap(
+                          alignment: WrapAlignment.center,
+                          crossAxisAlignment: WrapCrossAlignment.center,
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.symmetric(vertical: 20),
+                              child: Image.asset(AppImages.myImg, width: 350, height: 320,),
+                            ),
+                            BoxSoftSkills(),
+                          ],
+                        ),
+
+                        Padding(padding: EdgeInsets.symmetric(vertical: 20)),
+                        Center(
+                          child:Text(
+                            'Hard Skills',
+                            style: GoogleFonts.oswald(
+                              color: Definicoes.threeColor,
+                              fontSize: 32.0,
+                              fontWeight: FontWeight.normal,
+                            ),
+                          ),
+                        ),
+                        
+                        Padding(padding: EdgeInsets.only(bottom: 20)),
+                  
+                        //Cart Skills FRONT-END
+                        Wrap(
+                          alignment: WrapAlignment.spaceAround,
+                          direction: Axis.horizontal,
+                          children:[
+                            BoxSkills(
+                              title: 'Front-End', 
+                              lista: ListSkills.listFrontEnd,
+                              //color: Colors.white30,
+                              color: Definicoes.bgColor,
+                              colorProgress: Definicoes.primaryColor,
+                            ),
+
+                            
+                            if (tela < 701) ...[
+                              SizedBox(
+                                height: 10,
+                                width: MediaQuery.of(context).size.width,
+                              )
+                            ]else ...[
+                                Padding(padding: EdgeInsets.symmetric(horizontal: 5))
+                              ],
+                                                  
+                            BoxSkills(
+                              title: 'Back-End', 
+                              lista: ListSkills.listBackEnd,
+                              color: Definicoes.bgColor, 
+                              colorProgress: Definicoes.threeColor,
+                            ),
+
+                            if (tela < 701) ...[
+                              SizedBox(
+                                height: 10,
+                                width: MediaQuery.of(context).size.width,
+                              )
+                            ]else ...[
+                                Padding(padding: EdgeInsets.symmetric(horizontal: 5))
+                              ],
+
+                            
+                            BoxSkills(
+                              title: 'Diferenciais', 
+                              lista: ListSkills.listDiferenciais,
+                              color: Definicoes.bgColor,  
+                              colorProgress: Definicoes.threeColor,
+                            ),
+
+                          ]
+                        ),
+                  
+                        Padding(padding: EdgeInsets.only(top: 20)),
                         
                       ],
                     ),
@@ -143,124 +234,6 @@ class _AboutScreenState extends State<AboutScreen> {
             ),
           ),
 
-
-          SliverToBoxAdapter(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                
-                Padding(padding: EdgeInsets.symmetric(vertical: 20)),
-
-                Center(
-                  child: AnimatedTextKit(
-                    animatedTexts: [
-                      ColorizeAnimatedText(
-                        'Soft Skills',
-                        textStyle: GoogleFonts.oswald(
-                          fontSize: 32.0,
-                          fontWeight: FontWeight.normal,
-                        ),
-                        colors: Definicoes.colorizeColors,
-                      ),
-                    ],
-                    repeatForever: true,
-
-                  ),
-                ),
-
-                Wrap(
-                  alignment: WrapAlignment.center,
-                  crossAxisAlignment: WrapCrossAlignment.center,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 20),
-                      child: Image.asset(AppImages.myImg, width: 350, height: 320,),
-                    ),
-                    BoxSoftSkills(),
-                  ],
-                ),
-
-                Padding(padding: EdgeInsets.symmetric(vertical: 20)),
-
-                Center(
-                  child: AnimatedTextKit(
-                    animatedTexts: [
-                      ColorizeAnimatedText(
-                        'Hard Skills',
-                        textStyle: GoogleFonts.oswald(
-                          fontSize: 32.0,
-                          fontWeight: FontWeight.normal,
-                        ),
-                        colors: Definicoes.colorizeColors,
-                      ),
-                    ],
-                    repeatForever: true,
-
-                  ),
-                ),
-
-                Padding(padding: EdgeInsets.only(bottom: 20)),
-          
-                //Cart Skills FRONT-END
-                Wrap(
-                  alignment: WrapAlignment.spaceAround,
-                  direction: Axis.horizontal,
-                  children:[
-                    BoxSkills(
-                      title: 'Front-End', 
-                      lista: ListSkills.listFrontEnd,
-                      //color: Colors.white30,
-                      color: Definicoes.bgColor,
-                      colorProgress: Definicoes.primaryColor,
-                    ),
-
-                    
-                    if (tela < 701) ...[
-                      SizedBox(
-                        height: 10,
-                        width: MediaQuery.of(context).size.width,
-                      )
-                    ]else ...[
-                        Padding(padding: EdgeInsets.symmetric(horizontal: 5))
-                      ],
-                                          
-                    BoxSkills(
-                      title: 'Back-End', 
-                      lista: ListSkills.listBackEnd,
-                      color: Definicoes.bgColor, 
-                      colorProgress: Definicoes.threeColor,
-                    ),
-
-                    if (tela < 701) ...[
-                      SizedBox(
-                        height: 10,
-                        width: MediaQuery.of(context).size.width,
-                      )
-                    ]else ...[
-                        Padding(padding: EdgeInsets.symmetric(horizontal: 5))
-                      ],
-
-                    
-                    BoxSkills(
-                      title: 'Diferenciais', 
-                      lista: ListSkills.listDiferenciais,
-                      color: Definicoes.bgColor,  
-                      colorProgress: Definicoes.threeColor,
-                    ),
-
-                  ]
-                ),
-          
-                Padding(padding: EdgeInsets.only(top: 20)),
-
-
-                
-
-                
-
-              ],
-            ),
-          )
         ],
       ),)
     );

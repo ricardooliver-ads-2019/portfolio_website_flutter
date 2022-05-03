@@ -6,4 +6,5 @@ class AppRoutes{
   static final PROJETOS = '/projetos';
   static final CONTATOS = '/contatos';
   static final MENUMOBILE = '/menu-mobile';
+  static final DETALHES = '/detalhes';
 }

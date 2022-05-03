@@ -1,7 +1,6 @@
 import 'package:animated_card/animated_card.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:portfolio_website_flutter/components/animation_modal.dart';
 import 'package:portfolio_website_flutter/components/contact_form.dart';
 import 'package:portfolio_website_flutter/components/drawerc.dart';
 import 'package:portfolio_website_flutter/components/my_card_contact.dart';

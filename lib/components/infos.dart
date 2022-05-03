@@ -1,5 +1,4 @@
 import 'package:animated_card/animated_card.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio_website_flutter/utils/app_images.dart';
 

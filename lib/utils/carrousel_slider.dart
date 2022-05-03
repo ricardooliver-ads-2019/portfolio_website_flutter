@@ -1,16 +1,32 @@
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:flutter/animation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:portfolio_website_flutter/utils/app_images.dart';
 
 final List<String> imgList = [
+  // AppImages.imgCarrocellTelaApp20,
+  // AppImages.imgCarrocellTelaApp21,
+  // AppImages.imgCarrocellTelaApp11,
+  // AppImages.imgCarrocellTelaApp12,
+  AppImages.imgCarrocelSplashAppEncontraFarmaciasAriquemes,
+  AppImages.imgCarrocelHomeAppEncontraFarmaciasAriquemes,
+  AppImages.imgCarrocelDetalhesAppEncontraFarmaciasAriquemes,
+  
+  AppImages.imgCarrocellLoginTopFilmes,
+  AppImages.imgCarrocellHomeTopFilmes,
+  AppImages.imgCarrocellFavoritosTopFilmes,
+  AppImages.imgCarrocellTopFilmesDetalhe,
+
+  AppImages.imgCarrocellCriptomoeda,
+
   AppImages.imgCarrocellPayFlowLogin,
   AppImages.imgCarrocellPayFlowHome,
-  AppImages.imgCarrocellTelaApp20,
-  AppImages.imgCarrocellTelaApp21,
-  AppImages.imgCarrocellTelaApp11,
-  AppImages.imgCarrocellTelaApp12,
+
+  AppImages.imgCarrocellHomeApp_locate_bike,
+  AppImages.imgCarrocellDetalhesApp_locate_bike,
+  AppImages.imgCarrocellCarrinhoApp_locate_bike,
+  AppImages.imgCarrocellPgMercadoPagoApp_locate_bike,
+
   
 ];
 

@@ -6,6 +6,7 @@ import 'package:portfolio_website_flutter/components/cards_AppsWebs.dart';
 import 'package:portfolio_website_flutter/components/drawerc.dart';
 import 'package:portfolio_website_flutter/components/list_cardsApps.dart';
 import 'package:portfolio_website_flutter/components/sliver_appbar_custom.dart';
+import 'package:portfolio_website_flutter/models/aplicativos.dart';
 import 'package:portfolio_website_flutter/utils/app_images.dart';
 import 'package:portfolio_website_flutter/utils/carrousel_slider.dart';
 import 'package:portfolio_website_flutter/utils/list_cardsAppsWebs.dart';
@@ -13,7 +14,8 @@ import 'package:portfolio_website_flutter/utils/styles.dart';
 
 
 class WorksScreen extends StatefulWidget {
-  const WorksScreen({ Key? key }) : super(key: key);
+  WorksScreen({ Key? key }) : super(key: key);
+  final ScrollController controller = ScrollController();
   
   @override
   _WorksScreenState createState() => _WorksScreenState();
@@ -103,11 +105,45 @@ class _WorksScreenState extends State<WorksScreen> {
           ),
 
           SliverToBoxAdapter(
-            child: Container(
-              height: 450,
-              decoration: BoxDecoration(
-            ),
-              child: ListCardsApps(),
+            child: Center(
+              child: Container(
+                constraints: BoxConstraints(maxWidth: 550, minWidth: 270),
+                height: 450,
+                decoration: BoxDecoration(
+              ),
+                child: Scrollbar(
+                  scrollbarOrientation: ScrollbarOrientation.bottom,
+                   showTrackOnHover:true,
+                    controller: widget.controller,
+                    isAlwaysShown: true,
+                  child: ListView(
+                    scrollDirection: Axis.horizontal,
+                    controller: widget.controller,
+                    children: [
+                      ListCardsApps(app: Aplicativos().appPayFlow),
+                      SizedBox(
+                        width: 15,
+                      ),
+                      ListCardsApps(app: Aplicativos().appTopFilmes),
+                      SizedBox(
+                        width: 15,
+                      ),
+                      ListCardsApps(app: Aplicativos().appEncontraFarmaciasAriquemes),
+                      SizedBox(
+                        width: 15,
+                      ),
+                      ListCardsApps(app: Aplicativos().appLocationBike),
+                      SizedBox(
+                        width: 15,
+                      ),
+                      ListCardsApps(app: Aplicativos().appCotaCriptomoedas),
+                      SizedBox(
+                        width: 15,
+                      ),
+                    ],
+                  ),
+                )
+              ),
             )
           ),
 
@@ -153,7 +189,8 @@ class _WorksScreenState extends State<WorksScreen> {
           ),
       
         ],
-      ),)
+      ),
+    )
     );
   }
 }

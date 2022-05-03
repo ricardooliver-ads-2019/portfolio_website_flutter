@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:portfolio_website_flutter/screens/detalhes.dart';
 import 'package:portfolio_website_flutter/utils/styles.dart';
 
 class ButtonC extends StatelessWidget {
-  const ButtonC({ Key? key, required this.rota }) : super(key: key);
-  final String rota;
+  const ButtonC({ Key? key, required this.app }) : super(key: key);
+  final Map<String, dynamic> app;
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +13,9 @@ class ButtonC extends StatelessWidget {
       cursor: SystemMouseCursors.click,
       child: InkWell(
         onTap: (){
-          Navigator.of(context).pushNamed(rota);
+          Navigator.of(context).push(MaterialPageRoute<void>(
+            builder: (BuildContext context) => Detalhes(App: app),
+        ),);
         },
         child: Container(
           width: 150,

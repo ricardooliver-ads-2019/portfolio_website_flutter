@@ -51,7 +51,7 @@ class cardsAppsWebs extends StatelessWidget {
 
                 Padding(padding: EdgeInsets.symmetric(vertical: 30)),
 
-                Center(child: ButtonC(rota: linkRota,))
+                //Center(child: ButtonC(rota: linkRota,))
               ],
             ),
           ),

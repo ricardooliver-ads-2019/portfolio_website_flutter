@@ -28,7 +28,6 @@ class MyApp extends StatelessWidget {
         AppRoutes.SOBRE_MIM: (context)=> AboutScreen(),
         AppRoutes.PROJETOS: (context)=> WorksScreen(),
         AppRoutes.CONTATOS: (context)=> ContactsPageScreen(),
-        
       },
     );
   }

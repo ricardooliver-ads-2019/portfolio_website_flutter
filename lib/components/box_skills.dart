@@ -18,7 +18,8 @@ class BoxSkills extends StatelessWidget {
     var tela = MediaQuery.of(context).size.width;
     
     return Container(
-      width: tela > 701 ? MediaQuery.of(context).size.width*0.26 : MediaQuery.of(context).size.width*0.9,
+      width: tela > 1080 ? MediaQuery.of(context).size.width*0.26 : MediaQuery.of(context).size.width*0.80,
+      constraints: BoxConstraints(minWidth: 280, maxWidth: 500),
       decoration: BoxDecoration(
         color: color,
         borderRadius: BorderRadius.circular(20),

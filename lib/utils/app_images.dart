@@ -15,17 +15,52 @@ static  const imgFundoCarrocellP = "assets/images/imgCarrocell/imgFundoCarrocell
 // teste
 static  const imgCarrocellPayFlowHome = "assets/assets/images/imgCarrocell/payFlowHome.jpg";
 static  const imgCarrocellPayFlowLogin = "assets/assets/images/imgCarrocell/payFlowLogin.jpg";
-static  const imgCarrocellTelaApp11 = "assets/assets/images/imgCarrocell/telaApp11.png";
-static  const imgCarrocellTelaApp12 = "assets/assets/images/imgCarrocell/telaApp12.png";
-static  const imgCarrocellTelaApp20 = "assets/assets/images/imgCarrocell/telaApp20.png";
-static  const imgCarrocellTelaApp21 = "assets/assets/images/imgCarrocell/telaApp21.png";
+// static  const imgCarrocellTelaApp11 = "assets/assets/images/imgCarrocell/telaApp11.png";
+// static  const imgCarrocellTelaApp12 = "assets/assets/images/imgCarrocell/telaApp12.png";
+// static  const imgCarrocellTelaApp20 = "assets/assets/images/imgCarrocell/telaApp20.png";
+// static  const imgCarrocellTelaApp21 = "assets/assets/images/imgCarrocell/telaApp21.png";
+
+static  const imgCarrocellCriptomoeda = "assets/assets/images/imgCarrocell/appCotacaoCriptomoedas.png";
+
+static  const imgCarrocellHomeApp_locate_bike = "assets/assets/images/imgCarrocell/homeApp_locate_bike.png";
+static  const imgCarrocellDetalhesApp_locate_bike = "assets/assets/images/imgCarrocell/detalhesApp_locate_bike.png";
+static  const imgCarrocellCarrinhoApp_locate_bike = "assets/assets/images/imgCarrocell/carrinhoApp_locate_bike.png";
+static  const imgCarrocellPgMercadoPagoApp_locate_bike = "assets/assets/images/imgCarrocell/pgMercadoPagoApp_locate_bike.png";
+
+static  const imgCarrocellLoginTopFilmes = "assets/assets/images/imgCarrocell/loginAppTopFilmes.png";
+static  const imgCarrocellHomeTopFilmes = "assets/assets/images/imgCarrocell/homeAppTopFilmes.png"; 
+static  const imgCarrocellFavoritosTopFilmes = "assets/assets/images/imgCarrocell/favoritosAppTopFilmes.png";  
+static  const imgCarrocellTopFilmesDetalhe = "assets/assets/images/imgCarrocell/detalheFilmes.png";
+
+static  const imgCarrocelSplashAppEncontraFarmaciasAriquemes = "assets/assets/images/imgCarrocell/pageSplashAppEncontraFarmaciasAriquemes.png";
+static  const imgCarrocelHomeAppEncontraFarmaciasAriquemes = 'assets/assets/images/imgCarrocell/pageHomeAppEncontraFarmaciasAriquemes.png';
+static  const imgCarrocelDetalhesAppEncontraFarmaciasAriquemes = 'assets/assets/images/imgCarrocell/pageDetalheAppEncontraFarmaciasAriquemes.png';
+
 //
+
+static  const imgCriptomoeda = "assets/images/imgCarrocell/appCotacaoCriptomoedas.png";
+
+static  const imgHomeApp_locate_bike = "assets/images/imgCarrocell/homeApp_locate_bike.png";
+static  const imgDetalhesApp_locate_bike = "assets/images/imgCarrocell/detalhesApp_locate_bike.png";
+static  const imgCarrinhoApp_locate_bike = "assets/images/imgCarrocell/carrinhoApp_locate_bike.png";
+static  const imgPgMercadoPagoApp_locate_bike = "assets/images/imgCarrocell/pgMercadoPagoApp_locate_bike.png";
+
+static  const imgLoginTopFilmes = "assets/images/imgCarrocell/loginAppTopFilmes.png";
+static  const imgHomeTopFilmes = "assets/images/imgCarrocell/homeAppTopFilmes.png"; 
+static  const imgFavoritosTopFilmes = "assets/images/imgCarrocell/favoritosAppTopFilmes.png";  
+static  const imgDetalheTopFilmes = "assets/images/imgCarrocell/detalheFilmes.png";
+
+static  const imgSplashAppEncontraFarmaciasAriquemes = "assets/images/imgCarrocell/pageSplashAppEncontraFarmaciasAriquemes.png";
+static  const imgHomeAppEncontraFarmaciasAriquemes = 'assets/images/imgCarrocell/pageHomeAppEncontraFarmaciasAriquemes.png';
+static  const imgDetalhesAppEncontraFarmaciasAriquemes = 'assets/images/imgCarrocell/pageDetalheAppEncontraFarmaciasAriquemes.png';
 static  const imgPayFlowHome = "assets/images/imgCarrocell/payFlowHome.jpg";
 static  const imgPayFlowLogin = "assets/images/imgCarrocell/payFlowLogin.jpg";
 static  const imgTelaApp11 = "assets/images/imgCarrocell/telaApp11.png";
 static  const imgTelaApp12 = "assets/images/imgCarrocell/telaApp12.png";
 static  const imgTelaApp20 = "assets/images/imgCarrocell/telaApp20.png";
 static  const imgTelaApp21 = "assets/images/imgCarrocell/telaApp21.png";
+
+
 //imagens templetes web
 static  const imgSiteContainerloc = "assets/images/imgSites/siteContainerloc.png";
 static  const imgSiteSerralheria = "assets/images/imgSites/seralheriaLoja.png";
@@ -63,6 +98,8 @@ static  const imgIconFirebase = "assets/images/imgIcones/iconFirebase.png";
 static  const imgIconFigma = "assets/images/imgIcones/iconFigma.png";
 static  const imgIconNotion = "assets/images/imgIcones/iconNotion.png";
 static  const imgIconCanvas = "assets/images/imgIcones/iconCanvas.png";
+static  const imgIconKotlin = 'assets/images/imgIcones/iconKotlin.png';
+static  const imgIconAndroid = 'assets/images/imgIcones/iconAndroid.png';
 
 
 }

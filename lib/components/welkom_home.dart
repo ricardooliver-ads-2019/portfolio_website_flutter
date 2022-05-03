@@ -71,6 +71,7 @@ class WelkomHome extends StatelessWidget {
                         repeatForever: true,
                         animatedTexts: [
                           ScaleAnimatedText('Mobile'),
+                          ScaleAnimatedText('Android'),
                           ScaleAnimatedText('Flutter'),
                         ],
                         onTap: () {

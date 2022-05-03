@@ -9,6 +9,7 @@ class DrawerC extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Drawer(
     child: Container(
+      constraints: BoxConstraints(maxWidth: 1500),
       color: Definicoes.bgDrawerColor,
       child: Column(
         children: [
